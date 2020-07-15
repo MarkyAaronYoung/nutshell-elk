@@ -23,7 +23,7 @@ const buildLandingPage = () => {
       <img class="card-img-top" src="https://i.pinimg.com/originals/ed/d4/9e/edd49ed7123a6f7f6a2c5316692aa34e.jpg" alt="Renaissance Souvenirs">
       <div class="card-body">
         <h5 class="card-title">Souvenirs</h5>
-        <a href="#" class="btn btn-primary">View</a>
+        <a href="#" class="btn btn-primary" id="viewSouv">View</a>
       </div>
     </div>
     <div class="card" style="width: 18rem;">
