@@ -1,0 +1,13 @@
+.card{
+  margin: 10px;
+  img{
+    height: 15vw;
+    object-fit: cover;
+  }
+}
+.landing-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
