@@ -1,7 +1,16 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import 'variables';
 
 
 body {
-  background-color: gold;
+  background-color: #f7e8a4ff;
+}
+
+h1 {
+  @include title-font(50px);
+}
+
+.fab {
+  color: #a44200ff;
 }
