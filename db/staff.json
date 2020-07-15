@@ -1,0 +1,17 @@
+{
+  "staff1": {
+      "name": "Inigo Montoya",
+      "jobTitle":  "Entertainer",
+      "imageUrl": "http://www.coolpic.net"
+  },
+  "staff2": {
+      "name": "Fezzik",
+      "jobTitle": "Security",
+      "imageUrl": "http://www.coolpic.net"
+  },
+  "staff3": {
+      "name": "Buttercup",
+      "jobTitle": "Queen",
+      "imageUrl": "http://www.coolpic.net"
+  }
+}
