@@ -1,13 +1,18 @@
 .card{
+  display: flex;
   margin: 10px;
+  place-items: center;
+  text-align: center;
   img{
-    height: 15vw;
+    height: 200px;
     object-fit: cover;
   }
+  border-radius: 10px;
 }
 .landing-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  
 }

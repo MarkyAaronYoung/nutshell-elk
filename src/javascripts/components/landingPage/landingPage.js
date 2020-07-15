@@ -10,6 +10,7 @@ const removeDiv = () => {
 };
 const buildLandingPage = () => {
   const domString = `
+  <h1>Free-Lancer</h1>
     <div class="landing-container">
     <div class="card" style="width: 18rem;">
       <img class="card-img-top" src="https://renfair.com/socal/wp-content/uploads/sites/2/2016/02/ArtichokesfromTheQuailInn.jpg" alt="Renaissance Food">
