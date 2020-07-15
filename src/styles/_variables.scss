@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap');
+
+@mixin title-font($fontsize) {
+  font-size: $fontsize;
+  font-family: 'Fondamento', cursive;
+  text-align: center;
+  color: #455f48ff;
+  text-shadow: 1px 1px #646b61ff;
+}
