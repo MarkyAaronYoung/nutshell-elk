@@ -1,0 +1,23 @@
+{
+  "souvenir1": {
+      "name": "Sword",
+      "price": 15,
+      "description": "blah blah blah blah",
+      "imageUrl": "http://www.coolpic.net",
+      "isAvailable": true
+  },
+  "souvenir2": {
+      "name": "Crown",
+      "price": 20,
+      "description": "blah blah blah blah",
+      "imageUrl": "http://www.coolpic.net",
+      "isAvailable": false
+  },
+  "souvenir3": {
+      "name": "goblet",
+      "price": 100,
+      "description": "blah blah blah blah",
+      "imageUrl": "http://www.coolpic.net",
+      "isAvailable": true
+  }
+}

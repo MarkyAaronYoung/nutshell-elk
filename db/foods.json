@@ -1,0 +1,20 @@
+{
+  "food1": {
+      "name": "Elephant Ear",
+      "price": 8,
+      "imageUrl": "http://www.coolpic.net",
+      "isAvailable": true
+  },
+  "food2": {
+      "name": "Funnel Cake",
+      "price": 6,
+      "imageUrl": "http://www.coolpic.net",
+      "isAvailable": true
+  },
+  "food3": {
+      "name": "Turkey Leg",
+      "price": 10,
+      "imageUrl": "http://www.coolpic.net",
+      "isAvailable": false
+  }
+}
