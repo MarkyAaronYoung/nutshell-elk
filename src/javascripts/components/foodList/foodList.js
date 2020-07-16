@@ -10,6 +10,16 @@ const buildFoods = (e) => {
       let domString = `
       <div>
       <h1>MENU</h1>
+      <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Food</th>
+          <th scope="col">Price</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+         <th scope="col">Is Available?</th>
+        </tr>
+      </thead>
       `;
       foods.forEach((food) => {
         if (food.isAvailable === true) {

@@ -7,6 +7,7 @@ const getFoods = () => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/foods.json`)
     .then((response) => {
       const foodObjects = response.data;
+      console.error(response);
       const foods = [];
       if (foodObjects) {
         Object.keys(foodObjects).forEach((foodId) => {

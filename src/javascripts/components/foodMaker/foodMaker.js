@@ -1,15 +1,5 @@
 const foodMaker = (food) => {
   const domString = `
-  <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Food</th>
-      <th scope="col">Price</th>
-      <th scope="col">Edit</th>
-      <th scope="col">Delete</th>
-     <th scope="col">Is Available?</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <th scope="row">${food.imageUrl}</th>
