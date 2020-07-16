@@ -1,5 +1,6 @@
 import './landingPage.scss';
 import utils from '../../helpers/utils';
+import foodList from '../foodList/foodList';
 
 const addDiv = () => {
   $('#landingPage').removeClass('hide');
@@ -16,7 +17,7 @@ const buildLandingPage = () => {
       <img class="card-img-top" src="https://renfair.com/socal/wp-content/uploads/sites/2/2016/02/ArtichokesfromTheQuailInn.jpg" alt="Renaissance Food">
       <div class="card-body">
         <h5 class="card-title">Food</h5>
-        <button class="btn btn-primary">View</button>
+        <button class="btn btn-primary" id="see-foods">View</button>
         <button class="btn btn-secondary auth-button">edit</button>
       </div>
     </div>
@@ -48,4 +49,14 @@ const buildLandingPage = () => {
   `;
   utils.printToDom('#landingPage', domString);
 };
-export default { addDiv, removeDiv, buildLandingPage };
+
+const viewEvents = () => {
+  $('body').on('click', '#see-foods', foodList.buildFoods);
+};
+
+export default {
+  addDiv,
+  removeDiv,
+  buildLandingPage,
+  viewEvents,
+};
