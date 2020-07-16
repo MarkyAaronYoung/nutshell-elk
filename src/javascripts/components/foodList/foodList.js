@@ -17,6 +17,9 @@ const buildFoods = (e) => {
         .then((foods) => {
           const headerString = `
             <h1>MENU</h1>
+            <div class="text-center" id="food-button">
+            <button type="button" id="add-food" class="btn btn-secondary">Add Food</button>
+            </div>
             <thead>
             <thead class="colored">
               <tr>
@@ -24,7 +27,7 @@ const buildFoods = (e) => {
                 <th scope="col">Price</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
-              <th scope="col">Is Available?</th>
+              <th scope="col">Available</th>
               </tr>
             </thead>
             `;
