@@ -2,21 +2,18 @@
   "food1": {
       "name": "Elephant Ear",
       "price": 8,
-      "imageUrl": "https://images.media-allrecipes.com/userphotos/4521792.jpg",
       "isAvailable": true
   },
 
   "food2": {
       "name": "Funnel Cake",
       "price": 6,
-      "imageUrl": "https://scienceandfooducla.files.wordpress.com/2016/09/5971601817_8ce68af50d_o.jpg",
       "isAvailable": true
   },
   
   "food3": {
       "name": "Turkey Leg",
       "price": 10,
-      "imageUrl": "https://images1.dallasobserver.com/imager/u/original/11751505/smokedturkeyleg_luck.jpg",
       "isAvailable": false
   }
 }

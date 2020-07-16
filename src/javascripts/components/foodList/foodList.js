@@ -2,16 +2,18 @@ import foodData from '../../helpers/data/foodData';
 import menu from '../foodMaker/foodMaker';
 import utils from '../../helpers/utils';
 
+import './foodList.scss';
+
 const buildFoods = (e) => {
   e.preventDefault();
   $('#food').removeClass('hide');
+  let rowString = '';
   foodData.getFoods()
     .then((foods) => {
-      let domString = `
-      <div>
+      const headerString = `
       <h1>MENU</h1>
-      <table class="table">
       <thead>
+      <thead class="colored">
         <tr>
           <th scope="col">Food</th>
           <th scope="col">Price</th>
@@ -23,13 +25,11 @@ const buildFoods = (e) => {
       `;
       foods.forEach((food) => {
         if (food.isAvailable === true) {
-          domString += menu.foodMaker(food);
+          rowString += menu.foodMaker(food);
         }
       });
 
-      domString += `</div>
-      `;
-
+      const domString = `<table class='table table-bordered'>` + headerString + rowString + `</table>` // eslint-disable-line
       utils.printToDom('#food', domString);
     })
     .catch((err) => console.error('it broke', err));
