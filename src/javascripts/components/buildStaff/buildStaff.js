@@ -11,7 +11,11 @@ const staffBuilder = (e) => {
     .then((staffee) => {
       let domString = `
                           <h2 class="text-center">Staff</h2>
+                          <div class="d-flex justify-content-center align-items-center">
+                          <button class="btn btn-dark" id="home">home</button>
+                          </div>
                           <div class="staff-container"> 
+                          
       `;
       staffee.forEach((staff) => {
         domString += `
@@ -37,6 +41,7 @@ const staffBuilder = (e) => {
 
 const staffEvents = () => {
   $('body').one('click', '#viewStaff', staffBuilder);
+  $('#components').removeClass('hide');
 };
 
 export default { staffEvents };
