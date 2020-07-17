@@ -41,7 +41,7 @@ const buildLandingPage = () => {
       <img class="card-img-top" src="https://www.eastbaytimes.com/wp-content/uploads/2018/06/fest-renaissance5-0603-04.jpg?w=620" alt="Staff">
       <div class="card-body">
         <h5 class="card-title">Staff</h5>
-        <button class="btn btn-primary">View</button>
+        <button class="btn btn-primary" id="viewStaff">View</button>
         <button class="btn btn-secondary auth-button">edit</button>
       </div>
     </div>
