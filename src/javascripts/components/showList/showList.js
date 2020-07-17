@@ -1,5 +1,8 @@
 import showData from '../../helpers/data/showData';
 import showBuilder from '../showBuilder/showBuilder';
+
+// eslint-disable-next-line import/no-cycle
+import authData from '../../helpers/data/authData';
 import utils from '../../helpers/utils';
 
 const showViewer = (e) => {
@@ -19,7 +22,8 @@ const showViewer = (e) => {
       });
 
       domString += '</div>';
-      console.error(domString);
+      authData.checkLoginStatus();
+      $('#landingPage').addClass('hide');
       utils.printToDom('#shows', domString);
     })
     .catch((err) => console.error(err));

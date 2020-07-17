@@ -23,4 +23,6 @@ const getSouv = () => new Promise((resolve, reject) => {
 
 const getSouvById = (souvId) => axios.get(`${baseUrl}/souvenirs/${souvId}.json`);
 
-export default { getSouv, getSouvById };
+const addSouv = (newSouvObj) => axios.post(`${baseUrl}/souvenirs.json`, newSouvObj);
+
+export default { getSouv, getSouvById, addSouv };

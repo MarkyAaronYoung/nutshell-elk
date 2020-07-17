@@ -6,7 +6,7 @@ const souvCardBuilder = (souv) => {
                     <img class="card-img-top" id="souv-image" src="${souv.imageUrl}" alt="...">
                     <div class="card-body">
                       <h3 class="card-title">${souv.name}</h3>
-                      <h4>${souv.price}</h4>
+                      <h4>$${souv.price}</h4>
                       <p>${souv.description}</p>
                       <button class="btn btn-primary auth-button" id="edit-souv">Edit</button>
                       <button class="btn btn-primary auth-button" id="delete-souv">Delete</button>
@@ -18,7 +18,7 @@ const souvCardBuilder = (souv) => {
                     <img class="card-img-top" id="souv-image" src="${souv.imageUrl}" alt="...">
                     <div class="card-body">
                       <h3 class="card-title">${souv.name}</h3>
-                      <h4>${souv.price}</h4>
+                      <h4>$${souv.price}</h4>
                       <p>${souv.description}</p>
                       <p>SOLD OUT!</P>
                       <button class="btn btn-primary auth-button" id="edit-souv">Edit</button>
