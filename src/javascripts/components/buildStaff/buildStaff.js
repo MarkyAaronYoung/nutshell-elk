@@ -33,6 +33,7 @@ const staffBuilder = (e) => {
       });
       domString += '</div>';
       authData.checkLoginStatus();
+      $('#landingPage').addClass('hide');
       utils.printToDom('#staff', domString);
     })
     .catch((err) => console.error(err));
@@ -41,7 +42,6 @@ const staffBuilder = (e) => {
 const staffEvents = () => {
   $('body').one('click', '#viewStaff', staffBuilder);
   $('#components').removeClass('hide');
-  // $('#landingPage').addClass('hide');
 };
 
 export default { staffEvents };
