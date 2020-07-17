@@ -25,4 +25,11 @@ const getSouvById = (souvId) => axios.get(`${baseUrl}/souvenirs/${souvId}.json`)
 
 const addSouv = (newSouvObj) => axios.post(`${baseUrl}/souvenirs.json`, newSouvObj);
 
-export default { getSouv, getSouvById, addSouv };
+const deleteSouv = (souvId) => axios.delete(`${baseUrl}/souvenirs/${souvId}.json`);
+
+export default {
+  getSouv,
+  getSouvById,
+  addSouv,
+  deleteSouv,
+};
