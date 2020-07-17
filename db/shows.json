@@ -1,20 +1,20 @@
 {
   "show1": {
       "name": "Sword Swallower",
-      "scheduledTime": "12:00",
-      "description": "blah blah blah blah blah",
-      "imageUrl": "http://www.coolpic.net"
+      "length": "1 hour",
+      "description": "Our suave group of sword swallowers are sworn to swallow any sword swiftly for your audiences viewing pleasure!",
+      "imageUrl": "https://instinctmusic.com.au/wp-content/uploads/2016/02/sword-450-2-555x345.jpg"
   },
   "show2": {
       "name": "Joust",
-      "scheduledTime": "2:00",
-      "description": "blah blah blah blah blah",
-      "imageUrl": "http://www.coolpic.net"
+      "length": "2 hours",
+      "description": "Our jousting events are sure to enrapture any adoring medieval fan, peasant and royalty alike!",
+      "imageUrl": "https://www.ancient.eu/img/r/p/500x600/8703.jpg?v=1569519428"
   },
   "show3": {
       "name": "Glass Blowing",
-      "scheduledTime": "4:00",
-      "description": "blah blah blah blah blah",
-      "imageUrl": "http://www.coolpic.net"
+      "length": "12 hours",
+      "description": "spend all day with our crafty glass blower as they conjure up many mystical and exciting glass goods and gizmos!",
+      "imageUrl": "https://images.squarespace-cdn.com/content/v1/57727e5de58c622f5585c4fd/1540825468278-GV6VNYZT4M7DONK5S9W7/ke17ZwdGBToddI8pDm48kMLWVRtR8W_vvN4H6o1mNT0UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcabrC98jY6_a-ZYj0j2CQKzH6FU1rcwy_cUTim8XiFgz1CVDN7OAqC77QCRuxOykE/How-glassblowing-works.png?format=1500w"
   }
 }

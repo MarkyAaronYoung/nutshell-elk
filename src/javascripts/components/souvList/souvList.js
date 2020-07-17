@@ -1,4 +1,3 @@
-// import utils from '../../helpers/utils';
 import souvData from '../../helpers/data/souvData';
 import utils from '../../helpers/utils';
 import souvBuilder from '../souvBuilder/souvBuilder';
@@ -21,7 +20,6 @@ const souvViewer = (e) => {
       });
 
       domString += '</div>';
-      console.error(domString);
       utils.printToDom('#souvenirs', domString);
     })
     .catch((err) => console.error(err));

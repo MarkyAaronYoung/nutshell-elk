@@ -33,7 +33,7 @@ const buildLandingPage = () => {
       <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRCpy9FT2DhSC9yYePu3sL4PYJh88EbNkyAtw&usqp=CAU" alt="Jousting">
       <div class="card-body">
         <h5 class="card-title">Shows</h5>
-        <button class="btn btn-primary">View</button>
+        <button class="btn btn-primary" id="viewShows">View</button>
         <button class="btn btn-secondary auth-button">edit</button>
       </div>
     </div>
