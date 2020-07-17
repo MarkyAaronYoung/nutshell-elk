@@ -24,26 +24,10 @@ const newSouvEvent = (e) => {
     .catch((err) => console.error(err));
 };
 
-const souvViewer = (e) => {
+const souvViewEvent = (e) => {
   e.preventDefault();
   $('#souvenirs').removeClass('hide');
-  souvData.getSouv()
-    .then((souvs) => {
-      let domString = `
-                    <div class="text-center">
-                      <h2 class="text-center">Souvenirs</h2>
-                      <button class="btn btn-primary auth-button text-center" id="add-souv">Add New Souvenir</button>
-                    </div>
-                      <div class="display-flex flex-wrap mySouvenirs card-deck">`;
-      souvs.forEach((souv) => {
-        domString += souvBuilder.souvCardBuilder(souv);
-      });
-
-      domString += '</div>';
-      $('#landingPage').addClass('hide');
-      utils.printToDom('#souvenirs', domString);
-    })
-    .catch((err) => console.error(err));
+  souvBuilder.souvCardBuilder();
 };
 
 const updatedSouvViewer = () => {
@@ -68,7 +52,7 @@ const updatedSouvViewer = () => {
 };
 
 const souvEvents = () => {
-  $('body').one('click', '#viewSouv', souvViewer);
+  $('body').on('click', '#viewSouv', souvViewEvent);
   $('body').one('click', '#add-souv', addSouv.addSouvForm);
   $('body').one('click', '#souv-adder', newSouvEvent);
 };
