@@ -15,8 +15,8 @@ const showAddFoodForm = () => {
     <input type="text" class="form-control" id="addFood-price">
   </div>
   <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Is Currently Available</label>
+    <input type="checkbox" class="form-check-input" id="addFood-checkbox">
+    <label class="form-check-label" for="addFood-checkbox">Is Currently Available</label>
   </div>
   <button type="submit" class="btn btn-primary" id="food-adder">Update!</button>
   </form>

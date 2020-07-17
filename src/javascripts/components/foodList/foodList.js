@@ -47,7 +47,7 @@ const addFoodEvent = (e) => {
   const newFood = {
     name: $('#addFood-name').val(),
     price: $('#addFood-price').val() * 1,
-    isAvailable: true,
+    isAvailable: $('#addFood-checkbox').prop('checked'),
   };
   foodData.addFood(newFood)
     .then(() => {
