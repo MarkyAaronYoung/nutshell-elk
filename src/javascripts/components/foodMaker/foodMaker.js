@@ -4,10 +4,10 @@ import utils from '../../helpers/utils';
 const foodMakerAuth = (food) => {
   const domString = `
   <tbody>
-    <tr id="${food.id}" class="dlt-food">
+    <tr id="${food.id}" class="modify-food">
       <th scope="row">${food.name}</th>
       <td>$${food.price}</td>
-      <td><button type="button" id="edit" class="btn btn-dark"><i class="fas fa-user-edit"></i></button></td>
+      <td class="edit"><button type="button" id="${food.id}" class="btn btn-dark"><i class="fas fa-user-edit"></i></button></td>
       <td><button type="button" id="food-delete" class="btn btn-dark"><i class="fas fa-trash-alt"></i></button></td>
      <td><div>
      <input type="checkbox" id="food" ${food.isAvailable ? 'checked' : ''} name="food">

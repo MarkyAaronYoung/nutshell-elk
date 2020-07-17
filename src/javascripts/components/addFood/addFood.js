@@ -18,7 +18,7 @@ const showAddFoodForm = () => {
     <input type="checkbox" class="form-check-input" id="addFood-checkbox">
     <label class="form-check-label" for="addFood-checkbox">Is Currently Available</label>
   </div>
-  <button type="submit" class="btn btn-primary" id="food-adder">Update!</button>
+  <button type="submit" class="btn btn-primary" id="food-adder">Add to the List!</button>
   </form>
   `;
   utils.printToDom('#new-food', domString);

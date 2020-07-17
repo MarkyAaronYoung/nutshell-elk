@@ -3,6 +3,7 @@ import 'firebase/auth';
 
 import foodData from '../../helpers/data/foodData';
 import addFood from '../addFood/addFood';
+import editFood from '../editFood/editFood';
 import menu from '../foodMaker/foodMaker';
 import utils from '../../helpers/utils';
 
@@ -58,7 +59,7 @@ const addFoodEvent = (e) => {
 };
 
 const removeFoodEvent = (e) => {
-  const foodId = e.target.closest('.dlt-food').id;
+  const foodId = e.target.closest('.modify-food').id;
   foodData.deleteFood(foodId)
     .then((response) => {
       console.warn(response);
@@ -67,10 +68,34 @@ const removeFoodEvent = (e) => {
     .catch((err) => console.error('could not delete food', err));
 };
 
+const showEditFoodForm = (e) => {
+  editFood.showFoodEditForm(e.target.closest('.modify-food').id);
+};
+
+const editFoodEvent = (e) => {
+  e.preventDefault();
+  const foodId = e.target.closest('.modify-food').id;
+
+  const editedFood = {
+    name: $('#editFood-name').val(),
+    price: $('#editFood-price').val() * 1,
+    isAvailable: $('#editFood-checkbox').prop('checked'),
+  };
+
+  foodData.updateFood(foodId, editedFood)
+    .then(() => {
+      utils.printToDom('#edit-food', '');
+      menu.authFood();
+    })
+    .catch((err) => console.error('could not edit food', err));
+};
+
 const foodListEvents = () => {
   $('body').on('click', '#food-adder', addFoodEvent);
   $('body').on('click', '#add-food', addFood.showAddFoodForm);
   $('body').on('click', '#food-delete', removeFoodEvent);
+  $('body').on('click', '.edit', showEditFoodForm);
+  $('body').on('click', '#food-editor', editFoodEvent);
 };
 
 export default {
