@@ -23,7 +23,7 @@ const addSouvForm = (e) => {
                         <input type="text" class="form-control" id="addSouv-imageUrl">
                       </div>
                       <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input" id="addSouv-isAvailable">
                         <label class="form-check-label" for="exampleCheck1">Is Currently Available</label>
                       </div>
                       <button type="submit" class="btn btn-primary" id="souv-adder">Update!</button>
