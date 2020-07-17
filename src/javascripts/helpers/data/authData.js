@@ -1,10 +1,11 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
+// eslint-disable-next-line import/no-cycle
 import souvList from '../../components/souvList/souvList';
 // eslint-disable-next-line import/no-cycle
 import staffList from '../../components/buildStaff/buildStaff';
-import landingPage from '../../components/landingPage/landingPage';
 
+// eslint-disable-next-line import/no-cycle
 import showList from '../../components/showList/showList';
 
 import foodList from '../../components/foodList/foodList';
@@ -15,7 +16,6 @@ const checkLoginStatus = () => {
 
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      landingPage.addDiv();
       $('.auth-button').removeClass('hide');
       loginButton.addClass('hide');
       logoutButton.removeClass('hide');

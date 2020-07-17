@@ -11,7 +11,7 @@
     "price": 20,
     "description": "Now you can rule your very own kingdom! Take control of your royal court with this authentic medieval crown!",
     "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/71bRhQo7qRL._SL1500_.jpg",
-    "isAvailable": true
+    "isAvailable": false
   },
   "souvenir3": {
     "name": "goblet",

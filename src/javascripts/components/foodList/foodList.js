@@ -10,6 +10,7 @@ import './foodList.scss';
 
 const buildFoods = (e) => {
   e.preventDefault();
+  $('#landingPage').addClass('hide');
   $('#food').removeClass('hide');
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
@@ -48,7 +49,6 @@ const addFoodEvent = (e) => {
     price: $('#addFood-price').val() * 1,
     isAvailable: true,
   };
-  console.warn(newFood);
   foodData.addFood(newFood)
     .then(() => {
       menu.authFood();
