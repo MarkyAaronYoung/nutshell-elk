@@ -1,4 +1,4 @@
-const souvBuilder = (souv) => {
+const souvCardBuilder = (souv) => {
   let domString = '';
   if (souv.isAvailable === true) {
     domString = `
@@ -30,4 +30,4 @@ const souvBuilder = (souv) => {
   return domString;
 };
 
-export default { souvBuilder };
+export default { souvCardBuilder };

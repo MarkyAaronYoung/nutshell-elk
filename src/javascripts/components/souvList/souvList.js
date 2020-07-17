@@ -1,10 +1,11 @@
 // import utils from '../../helpers/utils';
 import souvData from '../../helpers/data/souvData';
 import utils from '../../helpers/utils';
+import souvBuilder from '../souvBuilder/souvBuilder';
 
 import './souvList.scss';
 
-const souvBuilder = (e) => {
+const souvViewer = (e) => {
   e.preventDefault();
   $('#souvenirs').removeClass('hide');
   souvData.getSouv()
@@ -16,17 +17,18 @@ const souvBuilder = (e) => {
                     </div>
                       <div class="display-flex flex-wrap mySouvenirs card-deck">`;
       souvs.forEach((souv) => {
-        domString += souvBuilder.souvBuilder(souv);
+        domString += souvBuilder.souvCardBuilder(souv);
       });
 
       domString += '</div>';
+      console.error(domString);
       utils.printToDom('#souvenirs', domString);
     })
     .catch((err) => console.error(err));
 };
 
 const souvEvents = () => {
-  $('body').one('click', '#viewSouv', souvBuilder);
+  $('body').one('click', '#viewSouv', souvViewer);
 };
 
 export default { souvEvents };
