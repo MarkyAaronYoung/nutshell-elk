@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import souvList from '../../components/souvList/souvList';
-
+import showList from '../../components/showList/showList';
 // import landingPage from '../../components/landingPage/landingPage';
 
 const checkLoginStatus = () => {
@@ -18,6 +18,7 @@ const checkLoginStatus = () => {
       // editBtn.removeClass('hide');
       // dltBtn.removeClass('hide');
       souvList.souvEvents();
+      showList.showEvents();
     } else {
       // landingPage.removeDiv();
       $('.auth-button').addClass('hide');
@@ -26,6 +27,7 @@ const checkLoginStatus = () => {
       // editBtn.addClass('hide');
       // dltBtn.addClass('hide');
       souvList.souvEvents();
+      showList.showEvents();
     }
   });
 };
