@@ -2,6 +2,7 @@ import staffData from '../../helpers/data/staffData';
 import utils from '../../helpers/utils';
 // eslint-disable-next-line import/no-cycle
 import authData from '../../helpers/data/authData';
+import showForm from '../addStaff/addStaff';
 import './buildStaff.scss';
 
 const staffBuilder = (e) => {
@@ -12,7 +13,7 @@ const staffBuilder = (e) => {
       let domString = `
                           <h2 class="text-center">Staff</h2>
                           <div class="d-flex justify-content-center align-items-center">
-                          <button class="btn btn-dark" id="home">home</button>
+                          <button class="btn btn-secondary auth-button" id="add-staff">Add</button>
                           </div>
                           <div class="staff-container"> 
                           
@@ -25,13 +26,13 @@ const staffBuilder = (e) => {
                 <div class="card-body">
                   <h5 class="card-title">${staff.name}</h5>
                   <h5 class="card-title">${staff.jobTitle}</h5>
-                  <button class="btn btn-primary auth-button" id="edit-souv">Edit</button>
-                  <button class="btn btn-secondary auth-button" id="add-souv">Add</button>
+                  <button class="btn btn-primary auth-button" id="edit-staff">Edit</button>
+                  <button class="btn btn-secondary auth-button" id="add-staff">Add</button>
                 </div>
                 </div>
               `;
       });
-      domString += '</div>';
+      domString += '</div><div id="new-staff"></div>';
       authData.checkLoginStatus();
       $('#landingPage').addClass('hide');
       utils.printToDom('#staff', domString);
@@ -41,6 +42,7 @@ const staffBuilder = (e) => {
 
 const staffEvents = () => {
   $('body').one('click', '#viewStaff', staffBuilder);
+  $('body').one('click', '#add-staff', showForm.showForm);
   $('#components').removeClass('hide');
 };
 
