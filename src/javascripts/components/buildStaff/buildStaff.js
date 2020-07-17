@@ -1,6 +1,7 @@
 import staffData from '../../helpers/data/staffData';
 import utils from '../../helpers/utils';
-
+// eslint-disable-next-line import/no-cycle
+import authData from '../../helpers/data/authData';
 import './buildStaff.scss';
 
 const staffBuilder = (e) => {
@@ -27,6 +28,7 @@ const staffBuilder = (e) => {
               `;
       });
       domString += '</div>';
+      authData.checkLoginStatus();
       $('#landingPage').addClass('hide');
       utils.printToDom('#staff', domString);
     })
