@@ -6,7 +6,6 @@ import showList from '../../components/showList/showList';
 
 import foodList from '../../components/foodList/foodList';
 
-
 // import landingPage from '../../components/landingPage/landingPage';
 
 const checkLoginStatus = () => {
@@ -24,7 +23,6 @@ const checkLoginStatus = () => {
       showList.showEvents();
 
       foodList.foodListEvents();
-
     } else {
       // landingPage.removeDiv();
       $('.auth-button').addClass('hide');
