@@ -11,7 +11,7 @@ const showAddFoodForm = () => {
     <input type="text" class="form-control" id="addFood-name">
   </div>
   <div class="form-group">
-    <label for="addFood-price">Price</label>
+    <label for="addFood-price">Price $</label>
     <input type="text" class="form-control" id="addFood-price">
   </div>
   <div class="form-check">
