@@ -2,6 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 import foodData from '../../helpers/data/foodData';
+import addFood from '../addFood/addFood';
 import menu from '../foodMaker/foodMaker';
 import utils from '../../helpers/utils';
 
@@ -12,31 +13,7 @@ const buildFoods = (e) => {
   $('#food').removeClass('hide');
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      let rowString = '';
-      foodData.getFoods()
-        .then((foods) => {
-          const headerString = `
-            <h1>MENU</h1>
-            <div class="text-center" id="food-button">
-            <button type="button" id="add-food" class="btn btn-secondary">Add Food</button>
-            </div>
-            <thead>
-            <thead class="colored">
-              <tr>
-                <th scope="col">Food</th>
-                <th scope="col">Price</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
-              <th scope="col">Available</th>
-              </tr>
-            </thead>
-            `;
-          foods.forEach((food) => {
-            rowString += menu.foodMakerAuth(food);
-          });
-          const domString = `<table class='table table-bordered'>` + headerString + rowString + `</table>` // eslint-disable-line
-          utils.printToDom('#food', domString);
-        });
+      menu.authFood();
     } else {
       let rowString = '';
       foodData.getFoods()
@@ -74,8 +51,15 @@ const addFoodEvent = (e) => {
   console.warn(newFood);
   foodData.addFood(newFood)
     .then(() => {
-      
+      menu.authFood();
+      utils.printToDom('#new-food', '');
     })
-}
+    .catch((err) => console.error('could not add food', err));
+};
 
-export default { buildFoods, addFoodEvent };
+const foodListEvents = () => {
+  $('body').on('click', '#food-adder', addFoodEvent);
+  $('body').on('click', '#add-food', addFood.showAddFoodForm);
+};
+
+export default { buildFoods, addFoodEvent, foodListEvents };
