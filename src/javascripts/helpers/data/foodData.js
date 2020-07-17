@@ -19,4 +19,6 @@ const getFoods = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getFoods };
+const addFood = (newFoodObj) => axios.post(`${baseUrl}/foods.json`, newFoodObj);
+
+export default { getFoods, addFood };
