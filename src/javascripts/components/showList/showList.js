@@ -1,36 +1,36 @@
-import showData from '../../helpers/data/showData';
 import showBuilder from '../showBuilder/showBuilder';
+import addShow from '../addShow/addShow';
+import showData from '../../helpers/data/showData';
 
-// eslint-disable-next-line import/no-cycle
-import authData from '../../helpers/data/authData';
 import utils from '../../helpers/utils';
 
-const showViewer = (e) => {
+const showViewEvent = (e) => {
   e.preventDefault();
-  console.error(e);
   $('#shows').removeClass('hide');
-  showData.getShows()
-    .then((shows) => {
-      let domString = `
-                    <div class="text-center">
-                      <h2 class="text-center">Upcoming Events</h2>
-                      <button class="btn btn-primary auth-button text-center" id="add-show">Add New Event</button>
-                    </div>
-                      <div class="display-flex flex-wrap myShows card-deck">`;
-      shows.forEach((show) => {
-        domString += showBuilder.showCardBuilder(show);
-      });
+  showBuilder.showCardBuilder();
+};
 
-      domString += '</div>';
-      authData.checkLoginStatus();
-      $('#landingPage').addClass('hide');
-      utils.printToDom('#shows', domString);
+const addShowEvent = (e) => {
+  e.preventDefault();
+  const newShowObj = {
+    name: $('#addShow-name').val(),
+    length: $('#addShow-length').val(),
+    description: $('#addShow-description').val(),
+    imageUrl: $('#addShow-imageUrl').val(),
+  };
+
+  showData.addShow(newShowObj)
+    .then(() => {
+      showBuilder.showCardBuilder();
+      utils.printToDom('#new-show', '');
     })
     .catch((err) => console.error(err));
 };
 
 const showEvents = () => {
-  $('body').one('click', '#viewShows', showViewer);
+  $('body').one('click', '#viewShows', showViewEvent);
+  $('body').on('click', '#add-show', addShow.addShowForm);
+  $('body').on('click', '#show-adder', addShowEvent);
 };
 
 export default { showEvents };

@@ -7,18 +7,16 @@ import './souvList.scss';
 
 const newSouvEvent = (e) => {
   e.preventDefault();
-  console.error(e);
   const newSouvObj = {
     name: $('#addSouv-name').val(),
     price: $('#addSouv-price').val(),
     description: $('#addSouv-description').val(),
     imageUrl: $('#addSouv-imageUrl').val(),
-    isAvailable: true,
+    isAvailable: $('#addSouv-isAvailable').prop('checked'),
   };
   souvData.addSouv(newSouvObj)
     .then(() => {
-      // eslint-disable-next-line no-use-before-define
-      updatedSouvViewer();
+      souvBuilder.souvCardBuilder();
       utils.printToDom('#new-souv', '');
     })
     .catch((err) => console.error(err));
@@ -28,27 +26,6 @@ const souvViewEvent = (e) => {
   e.preventDefault();
   $('#souvenirs').removeClass('hide');
   souvBuilder.souvCardBuilder();
-};
-
-const updatedSouvViewer = () => {
-  $('#souvenirs').removeClass('hide');
-  souvData.getSouv()
-    .then((souvs) => {
-      let domString = `
-                    <div class="text-center">
-                      <h2 class="text-center">Souvenirs</h2>
-                      <button class="btn btn-primary auth-button text-center" id="add-souv">Add New Souvenir</button>
-                    </div>
-                      <div class="display-flex flex-wrap mySouvenirs card-deck">`;
-      souvs.forEach((souv) => {
-        domString += souvBuilder.souvCardBuilder(souv);
-      });
-
-      domString += '</div>';
-      $('#landingPage').addClass('hide');
-      utils.printToDom('#souvenirs', domString);
-    })
-    .catch((err) => console.error(err));
 };
 
 const souvEvents = () => {
