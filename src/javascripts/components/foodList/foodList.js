@@ -57,9 +57,25 @@ const addFoodEvent = (e) => {
     .catch((err) => console.error('could not add food', err));
 };
 
+const removeFoodEvent = (e) => {
+  const foodId = e.target.closest('.dlt-food').id;
+  foodData.deleteFood(foodId)
+    .then((response) => {
+      console.warn(response);
+      menu.authFood();
+    })
+    .catch((err) => console.error('could not delete food', err));
+};
+
 const foodListEvents = () => {
   $('body').on('click', '#food-adder', addFoodEvent);
   $('body').on('click', '#add-food', addFood.showAddFoodForm);
+  $('body').on('click', '#food-delete', removeFoodEvent);
 };
 
-export default { buildFoods, addFoodEvent, foodListEvents };
+export default {
+  buildFoods,
+  addFoodEvent,
+  foodListEvents,
+  removeFoodEvent,
+};
