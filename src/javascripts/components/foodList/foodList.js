@@ -64,4 +64,18 @@ const buildFoods = (e) => {
     .catch((err) => console.error('it broke', err));
 };
 
-export default { buildFoods };
+const addFoodEvent = (e) => {
+  e.preventDefault();
+  const newFood = {
+    name: $('#addFood-name').val(),
+    price: $('#addFood-price').val() * 1,
+    isAvailable: true,
+  };
+  console.warn(newFood);
+  foodData.addFood(newFood)
+    .then(() => {
+      
+    })
+}
+
+export default { buildFoods, addFoodEvent };

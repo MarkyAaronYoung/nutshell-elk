@@ -30,4 +30,31 @@ const foodMakerNoAuth = (food) => {
   return domString;
 };
 
+const showAuthFoods = () => {
+let rowString = '';
+      foodData.getFoods()
+        .then((foods) => {
+          const headerString = `
+            <h1>MENU</h1>
+            <div class="text-center" id="food-button">
+            <button type="button" id="add-food" class="btn btn-secondary">Add Food</button>
+            </div>
+            <thead>
+            <thead class="colored">
+              <tr>
+                <th scope="col">Food</th>
+                <th scope="col">Price</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              <th scope="col">Available</th>
+              </tr>
+            </thead>
+            `;
+          foods.forEach((food) => {
+            rowString += menu.foodMakerAuth(food);
+          });
+          const domString = `<table class='table table-bordered'>` + headerString + rowString + `</table>` // eslint-disable-line
+          utils.printToDom('#food', domString);
+        }
+
 export default { foodMakerAuth, foodMakerNoAuth };
