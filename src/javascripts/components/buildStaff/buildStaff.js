@@ -1,15 +1,24 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
 import staffData from '../../helpers/data/staffData';
 import utils from '../../helpers/utils';
 // import authData from '../../helpers/data/authData';
 import showForm from '../addStaff/addStaff';
 import staffBuilder from './buildStaffers';
 import editStaff from '../editStaff/editStaff';
+
 import './buildStaff.scss';
 
 const staffBuilders = (e) => {
   e.preventDefault();
   $('#staff').removeClass('hide');
-  staffBuilder.staffMaker();
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      staffBuilder.staffMakerAuth();
+    } else {
+      staffBuilder.staffMakerNoAuth();
+    }
+  });
 };
 const buildNewStaff = (e) => {
   e.preventDefault();
@@ -21,7 +30,7 @@ const buildNewStaff = (e) => {
   console.warn(newEmployee);
   staffData.addStaff(newEmployee)
     .then(() => {
-      staffBuilder.staffMaker();
+      staffBuilder.staffMakerAuth();
       utils.printToDom('#new-staff', '');
     })
     .catch((err) => console.error('cant add staff', err));
@@ -32,7 +41,7 @@ const deleteStaffEvent = (e) => {
   const staffId = e.target.closest('.card').id;
   staffData.deleteStaff(staffId)
     .then(() => {
-      staffBuilder.staffMaker();
+      staffBuilder.staffMakerAuth();
     })
     .catch((err) => console.error(err));
 };
