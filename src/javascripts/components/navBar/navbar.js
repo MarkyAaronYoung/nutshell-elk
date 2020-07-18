@@ -14,9 +14,17 @@ const resetPage = () => {
     e.preventDefault();
     $('#landingPage').removeClass('hide');
     $('#food').addClass('hide');
+    $('#add-food').addClass('hide');
+    $('#edit-food').addClass('hide');
     $('#souvenirs').addClass('hide');
+    $('#new-souv').addClass('hide');
+    $('#edit-souv').addClass('hide');
     $('#shows').addClass('hide');
+    $('#new-show').addClass('hide');
+    $('#edit-show').addClass('hide');
     $('#staff').addClass('hide');
+    $('#new-staff').addClass('hide');
+    $('#edit-staff').addClass('hide');
     landingPage.buildLandingPage();
   });
 };

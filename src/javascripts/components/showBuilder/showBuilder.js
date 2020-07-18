@@ -7,7 +7,7 @@ const showCardBuilder = () => {
       let domString = `
                     <div class="text-center">
                       <h2 class="text-center">Upcoming Events</h2>
-                      <button class="btn btn-primary auth-button text-center" id="add-show">Add New Event</button>
+                      <button class="btn btn-primary auth-button hide text-center" id="add-show">Add New Event</button>
                     </div>
                       <div class="display-flex flex-wrap myShows card-deck">`;
       shows.forEach((show) => {
@@ -17,8 +17,8 @@ const showCardBuilder = () => {
                           <h3 class="card-title">${show.name}</h3>
                           <h4>Event Length: ${show.length}</h4>
                           <p>${show.description}</p>
-                          <button class="btn btn-primary auth-button" id="update-show">Edit</button>
-                          <button class="btn btn-primary auth-button" id="delete-show">Delete</button>
+                          <button class="btn btn-primary auth-button hide" id="update-show">Edit</button>
+                          <button class="btn btn-primary auth-button hide" id="delete-show">Delete</button>
                         </div>
                       </div>`;
       });
