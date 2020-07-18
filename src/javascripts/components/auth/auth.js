@@ -17,6 +17,7 @@ const logoutButton = () => {
   $('#navbar-logout-button').click((e) => {
     e.preventDefault();
     firebase.auth().signOut();
+    $('#landingPage').removeClass('hide');
   });
 };
 

@@ -1,6 +1,8 @@
 import utils from '../../helpers/utils';
 import souvData from '../../helpers/data/souvData';
 
+import './souvBuilder.scss';
+
 const souvCardBuilder = () => {
   let domString = '';
   souvData.getSouv()
@@ -10,7 +12,7 @@ const souvCardBuilder = () => {
                       <h2 class="text-center">Souvenirs</h2>
                       <button class="btn btn-primary auth-button text-center" id="add-souv">Add New Souvenir</button>
                     </div>
-                    <div class="display-flex flex-wrap mySouvenirs card-deck">`;
+                    <div class="souv-container mySouvenirs">`;
       souvs.forEach((souv) => {
         if (souv.isAvailable === true) {
           domString += `
@@ -55,7 +57,7 @@ const noAuthSouvCardBuilder = () => {
                     <div class="text-center">
                       <h2 class="text-center">Souvenirs</h2>
                     </div>
-                    <div class="display-flex flex-wrap mySouvenirs card-deck">`;
+                    <div class="souv-container mySouvenirs">`;
       souvs.forEach((souv) => {
         if (souv.isAvailable === true) {
           domString += `
