@@ -11,7 +11,6 @@ const logoutEvent = () => {
 
 const resetPage = () => {
   $('#test-home').click((e) => {
-    console.error('thise works', e);
     e.preventDefault();
     $('#landingPage').removeClass('hide');
     $('#food').addClass('hide');
@@ -21,13 +20,5 @@ const resetPage = () => {
     landingPage.buildLandingPage();
   });
 };
-
-// const showComponents = () => {
-//   $('.view').click((e) => {
-//     console.error('working');
-//     e.preventDefault();
-//     $('#components').removeClass('hide');
-//   });
-// };
 
 export default { logoutEvent, resetPage };
