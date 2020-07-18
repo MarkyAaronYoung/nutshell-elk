@@ -4,11 +4,18 @@
 
 
 body {
-  background-color: #f7e8a4ff;
+  // background-color: #f7e8a4ff;
+  background: url("https://cdn.hipwallpaper.com/m/7/78/46n0xh.jpg") no-repeat;
+  background-size: cover;
 }
 
 h1 {
   @include title-font(50px);
+}
+
+h2 {
+  @include title-font(30px);
+  margin: 20px;
 }
 
 h5 {
@@ -36,5 +43,6 @@ h5 {
 }
 
 .navbar {
-  background-color: rgb(144, 153, 140) !important;
+  background-color: rgb(172, 168, 165) !important;
+  opacity: 90%;
 }

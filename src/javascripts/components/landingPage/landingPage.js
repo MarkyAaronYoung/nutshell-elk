@@ -11,7 +11,8 @@ const removeDiv = () => {
 };
 const buildLandingPage = () => {
   const domString = `
-  <h1>Free-Lancer</h1>
+  <h1 class="landingPage">Free-Lancer</h1>
+  <h2 class="text-align center">The World's Go-To Authority on Renaissance Faires</h2>
     <div class="landing-container">
     <div class="card" style="width: 18rem;">
       <img class="card-img-top" src="https://renfair.com/socal/wp-content/uploads/sites/2/2016/02/ArtichokesfromTheQuailInn.jpg" alt="Renaissance Food">
