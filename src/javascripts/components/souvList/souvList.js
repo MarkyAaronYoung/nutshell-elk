@@ -36,7 +36,6 @@ const removeSouvEvent = (e) => {
 const editSouvEvent = (e) => {
   e.preventDefault();
   const { souvId } = document.querySelector('#souv-id-finder').dataset;
-  console.error(souvId);
   const updatedSouv = {
     name: $('#editSouv-name').val(),
     price: $('#editSouv-price').val(),
