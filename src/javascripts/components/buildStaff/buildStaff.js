@@ -61,13 +61,12 @@ const editStaffEvent = (e) => {
 };
 
 const staffEvents = () => {
-  $('body').one('click', '#viewStaff', staffBuilders);
-  $('body').one('click', '#add-staff', showForm.showForm);
+  $('body').on('click', '#viewStaff', staffBuilders);
+  $('body').on('click', '#add-staff', showForm.showForm);
   $('body').on('click', '#staff-adder', buildNewStaff);
   $('body').on('click', '#delete-staff', deleteStaffEvent);
   $('body').on('click', '#edit-staff', showEditStaffForm);
   $('body').on('click', '#staff-update', editStaffEvent);
-  $('#components').removeClass('hide');
 };
 
 export default { staffEvents };
