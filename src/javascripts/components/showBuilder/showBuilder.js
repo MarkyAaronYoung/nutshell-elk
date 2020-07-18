@@ -17,8 +17,8 @@ const showCardBuilder = () => {
                           <h3 class="card-title">${show.name}</h3>
                           <h4>Event Length: ${show.length}</h4>
                           <p>${show.description}</p>
-                          <button class="btn btn-primary auth-button" id="update-show">Edit</button>
-                          <button class="btn btn-primary auth-button" id="delete-show">Delete</button>
+                          <button class="btn btn-primary auth-button hide" id="update-show">Edit</button>
+                          <button class="btn btn-primary auth-button hide" id="delete-show">Delete</button>
                         </div>
                       </div>`;
       });

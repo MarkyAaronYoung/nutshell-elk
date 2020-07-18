@@ -4,7 +4,7 @@ import apiKeys from './helpers/apiKeys.json';
 import authData from './helpers/data/authData';
 import auth from './components/auth/auth';
 import landing from './components/landingPage/landingPage';
-import home from './navBar/navbar';
+import home from './components/navBar/navbar';
 
 const init = () => {
   firebase.initializeApp(apiKeys.firebaseConfig);
