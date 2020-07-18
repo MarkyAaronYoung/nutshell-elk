@@ -29,7 +29,7 @@ const editSouvForm = (e) => {
                         <input type="text" class="form-control" id="editSouv-imageUrl" value="${souv.imageUrl}">
                       </div>
                       <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="editSouv-isAvailable">
+                        <input type="checkbox" class="form-check-input" id="editSouv-isAvailable" ${souv.isAvailable ? 'checked' : ''}>
                         <label class="form-check-label" for="editSouv-isAvailable">Is Currently Available</label>
                       </div>
                       <button type="submit" class="btn btn-primary" id="souv-editor">Update!</button>
