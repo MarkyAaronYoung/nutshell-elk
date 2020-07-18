@@ -14,7 +14,7 @@ const resetPage = () => {
     e.preventDefault();
     $('#landingPage').removeClass('hide');
     $('#food').addClass('hide');
-    $('#add-food').addClass('hide');
+    $('#new-food').addClass('hide');
     $('#edit-food').addClass('hide');
     $('#souvenirs').addClass('hide');
     $('#new-souv').addClass('hide');
