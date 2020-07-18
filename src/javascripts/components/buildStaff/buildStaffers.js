@@ -5,7 +5,7 @@ const staffMaker = () => {
   staffData.getStaff()
     .then((staffee) => {
       let domString = `
-                          <h2 class="text-center">Staff</h2>
+                          <h2 class="text-center staff-header">Staff</h2>
                           <div class="d-flex justify-content-center align-items-center">
                           <button class="btn btn-secondary auth-button" id="add-staff">Add</button>
                           </div>

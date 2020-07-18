@@ -1,3 +1,5 @@
+
+
 .card{
   display: flex;
   margin: 10px;
@@ -6,6 +8,8 @@
   img{
     height: 200px;
     object-fit: cover;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
   }
   border-radius: 10px;
 }
@@ -15,3 +19,6 @@
   justify-content: center;
   align-items: center;
 }
+// .staff-header {
+//   font-size: 30px;
+// }
