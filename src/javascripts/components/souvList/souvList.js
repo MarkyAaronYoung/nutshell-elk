@@ -1,3 +1,6 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
 import souvData from '../../helpers/data/souvData';
 import utils from '../../helpers/utils';
 import souvBuilder from '../souvBuilder/souvBuilder';
@@ -55,7 +58,13 @@ const editSouvEvent = (e) => {
 const souvViewEvent = (e) => {
   e.preventDefault();
   $('#souvenirs').removeClass('hide');
-  souvBuilder.souvCardBuilder();
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      souvBuilder.souvCardBuilder();
+    } else {
+      souvBuilder.noAuthSouvCardBuilder();
+    }
+  });
 };
 
 const souvEvents = () => {
