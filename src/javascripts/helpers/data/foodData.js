@@ -21,13 +21,16 @@ const getFoods = () => new Promise((resolve, reject) => {
 
 const addFood = (newFoodObj) => axios.post(`${baseUrl}/foods.json`, newFoodObj);
 
+const getFoodById = (foodId) => axios.get(`${baseUrl}/foods/${foodId}.json`);
+
 const deleteFood = (foodId) => axios.delete(`${baseUrl}/foods/${foodId}.json`);
 
-const updateFood = (foodId, editedFood) => axios.put(`${baseUrl}/food/${foodId}.json`, editedFood);
+const updateFood = (foodId, editedFood) => axios.put(`${baseUrl}/foods/${foodId}.json`, editedFood);
 
 export default {
   getFoods,
   addFood,
   deleteFood,
   updateFood,
+  getFoodById,
 };

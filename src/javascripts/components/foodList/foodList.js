@@ -69,6 +69,7 @@ const removeFoodEvent = (e) => {
 };
 
 const showEditFoodForm = (e) => {
+  $('#new-food').removeClass('hide');
   editFood.showFoodEditForm(e.target.closest('.modify-food').id);
 };
 
