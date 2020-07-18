@@ -6,7 +6,7 @@ const showFoodEditForm = (foodId) => {
     .then((response) => {
       const food = response.data;
       const domString = `
-      <h3>Edit Food</h3>
+      <h3 class="text-center">Edit Food</h3>
       <form class="modify-food" id=${foodId}>
         <div class="form-group">
           <label for="addFood-name">Food Name</label>

@@ -2,7 +2,6 @@ import utils from '../../helpers/utils';
 import './addFood.scss';
 
 const showAddFoodForm = () => {
-  console.warn('add food button');
   $('#new-food').removeClass('hide');
   const domString = `
   <form>

@@ -87,6 +87,7 @@ const editFoodEvent = (e) => {
     .then(() => {
       utils.printToDom('#edit-food', '');
       menu.authFood();
+      $('#new-food').addClass('hide');
     })
     .catch((err) => console.error('could not edit food', err));
 };
