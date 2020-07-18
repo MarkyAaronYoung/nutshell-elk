@@ -42,10 +42,21 @@ const buildNewStaff = (e) => {
     .catch((err) => console.error('cant add staff', err));
 };
 
+const deleteStaffEvent = (e) => {
+  e.preventDefault();
+  const staffId = e.target.closest('.card').id;
+  staffData.deleteStaff(staffId)
+    .then(() => {
+      staffComponent.staffMaker();
+    })
+    .catch((err) => console.error(err));
+};
+
 const staffEvents = () => {
   $('body').one('click', '#viewStaff', staffBuilder);
   $('body').one('click', '#add-staff', showForm.showForm);
   $('body').on('click', '#staff-adder', buildNewStaff);
+  $('body').on('click', '#delete-staff', deleteStaffEvent);
   $('#components').removeClass('hide');
 };
 
