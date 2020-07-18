@@ -22,5 +22,6 @@ const getStaff = () => new Promise((resolve, reject) => {
 });
 
 const getStaffById = (staffId) => axios.get(`${baseUrl}/staff/${staffId}.json`);
+const addStaff = (newEmployee) => axios.post(`${baseUrl}/staff.json`, newEmployee);
 
-export default { getStaff, getStaffById };
+export default { getStaff, getStaffById, addStaff };
