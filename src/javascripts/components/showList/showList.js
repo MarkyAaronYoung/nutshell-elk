@@ -1,14 +1,24 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
 import showBuilder from '../showBuilder/showBuilder';
 import addShow from '../addShow/addShow';
 import showData from '../../helpers/data/showData';
 import editShow from '../editShow/editShow';
 
 import utils from '../../helpers/utils';
+import './showList.scss';
 
 const showViewEvent = (e) => {
   e.preventDefault();
   $('#shows').removeClass('hide');
-  showBuilder.showCardBuilder();
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      showBuilder.showCardBuilder();
+    } else {
+      showBuilder.noAuthShowCardBuilder();
+    }
+  });
 };
 
 const addShowEvent = (e) => {
