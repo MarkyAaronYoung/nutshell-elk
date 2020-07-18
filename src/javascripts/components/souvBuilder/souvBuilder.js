@@ -8,7 +8,7 @@ const souvCardBuilder = () => {
       domString += `
                     <div class="text-center">
                       <h2 class="text-center">Souvenirs</h2>
-                      <button class="btn btn-primary auth-button text-center" id="add-souv">Add New Souvenir</button>
+                      <button class="btn btn-primary auth-button hide text-center" id="add-souv">Add New Souvenir</button>
                     </div>
                     <div class="display-flex flex-wrap mySouvenirs card-deck">`;
       souvs.forEach((souv) => {
@@ -20,8 +20,8 @@ const souvCardBuilder = () => {
                             <h3 class="card-title">${souv.name}</h3>
                             <h4>$${souv.price}</h4>
                             <p>${souv.description}</p>
-                            <button class="btn btn-primary auth-button" id="update-souv">Edit</button>
-                            <button class="btn btn-primary auth-button" id="delete-souv">Delete</button>
+                            <button class="btn btn-primary auth-button hide" id="update-souv">Edit</button>
+                            <button class="btn btn-primary auth-button hide" id="delete-souv">Delete</button>
                           </div>
                         </div>`;
         } else {
@@ -33,8 +33,8 @@ const souvCardBuilder = () => {
                             <h4>$${souv.price}</h4>
                             <p>${souv.description}</p>
                             <p>SOLD OUT!</P>
-                            <button class="btn btn-primary auth-button" id="update-souv">Edit</button>
-                            <button class="btn btn-primary auth-button" id="delete-souv">Delete</button>
+                            <button class="btn btn-primary auth-button hide" id="update-souv">Edit</button>
+                            <button class="btn btn-primary auth-button hide" id="delete-souv">Delete</button>
                           </div>
                         </div>`;
         }

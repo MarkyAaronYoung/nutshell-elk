@@ -60,8 +60,8 @@ const souvViewEvent = (e) => {
 
 const souvEvents = () => {
   $('body').on('click', '#viewSouv', souvViewEvent);
-  $('body').one('click', '#add-souv', addSouv.addSouvForm);
-  $('body').one('click', '#souv-adder', newSouvEvent);
+  $('body').on('click', '#add-souv', addSouv.addSouvForm);
+  $('body').on('click', '#souv-adder', newSouvEvent);
   $('body').on('click', '#delete-souv', removeSouvEvent);
   $('body').on('click', '#update-souv', editSouv.editSouvForm);
   $('body').on('click', '#souv-editor', editSouvEvent);
