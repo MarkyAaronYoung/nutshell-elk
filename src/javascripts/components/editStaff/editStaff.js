@@ -8,7 +8,6 @@ const staffEditForm = (staffId) => {
       console.error(response);
       const staff = response.data;
       const domString = `
-      <h3 class="text-center">Edit Food</h3>
       <form class="modify-staff" id=${staffId}> 
       <div class="form-group">
         <label for="editStaff-name">Name</label>

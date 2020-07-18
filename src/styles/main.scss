@@ -38,6 +38,9 @@ h5 {
   border: none !important;
   font-family: 'Cinzel', cursive;
   font-weight: 700;
+    &:hover {
+      background-color: rgba(164, 66, 0, .8)
+    }
 }
 
 .hide {
@@ -45,6 +48,16 @@ h5 {
 }
 
 .navbar {
-
   background-color: rgba(0,0,0,0.7) !important;
+}
+
+form {
+  font-family: 'David Libre', serif;
+  font-size: 1.2em;
+}
+
+.btn-secondary {
+  background-color: #646b61ff !important;
+  font-family: 'David Libre', serif;
+  border: none;
 }
