@@ -29,12 +29,4 @@ const resetPage = () => {
   });
 };
 
-// const showComponents = () => {
-//   $('.view').click((e) => {
-//     console.error('working');
-//     e.preventDefault();
-//     $('#components').removeClass('hide');
-//   });
-// };
-
 export default { logoutEvent, resetPage };
