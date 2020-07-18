@@ -64,7 +64,7 @@ const editStaffEvent = (e) => {
   staffData.updateStaff(staffId, editedStaff)
     .then(() => {
       utils.printToDom('#edit-staff', '');
-      staffBuilder.staffMaker();
+      staffBuilder.staffMakerAuth();
     })
     .catch((err) => console.error('cant edit staff', err));
 };
