@@ -59,7 +59,7 @@ const editShowEvent = (e) => {
 };
 
 const showEvents = () => {
-  $('body').one('click', '#viewShows', showViewEvent);
+  $('body').on('click', '#viewShows', showViewEvent);
   $('body').on('click', '#add-show', addShow.addShowForm);
   $('body').on('click', '#show-adder', addShowEvent);
   $('body').on('click', '#delete-show', removeShowEvent);
