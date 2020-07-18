@@ -12,6 +12,12 @@
     border-top-right-radius: 10px ;
   }
   border-radius: 10px;
+  &.grow {
+    transition: all .2s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
 .staff-container{
   display: flex;
