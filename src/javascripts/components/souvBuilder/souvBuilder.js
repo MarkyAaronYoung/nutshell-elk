@@ -8,7 +8,7 @@ const souvCardBuilder = () => {
       domString += `
                     <div class="text-center">
                       <h2 class="text-center">Souvenirs</h2>
-                      <button class="btn btn-primary auth-button text-center" id="add-souv">Add New Souvenir</button>
+                      <button class="btn btn-primary auth-button hide text-center" id="add-souv">Add New Souvenir</button>
                     </div>
                     <div class="display-flex flex-wrap mySouvenirs card-deck">`;
       souvs.forEach((souv) => {
