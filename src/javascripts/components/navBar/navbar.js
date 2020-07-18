@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import landingPage from '../components/landingPage/landingPage';
+import landingPage from '../landingPage/landingPage';
 
 const logoutEvent = () => {
   $('#navbar-logout-button').click((e) => {
