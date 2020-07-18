@@ -16,8 +16,8 @@ const staffMaker = () => {
         <div class="card-body">
           <h5 class="card-title">${staff.name}</h5>
           <h5 class="card-title">${staff.jobTitle}</h5>
-          <button class="btn btn-primary auth-button" id="edit-staff"><i class="fas fa-user-edit"></i></button>
-          <button class="btn btn-secondary auth-button" id="delete-staff"><i class="fas fa-trash-alt"></i></button>
+          <button class="btn btn-primary auth-button hide" id="edit-staff"><i class="fas fa-user-edit"></i></button>
+          <button class="btn btn-secondary auth-button hide" id="delete-staff"><i class="fas fa-trash-alt"></i></button>
         </div>
         </div>`;
       });
