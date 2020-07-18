@@ -1,5 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
-@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";;
 @import 'variables';
 
 
@@ -36,6 +36,8 @@ h5 {
 .btn-danger {
   background-color: #a44200ff;
   border: none !important;
+  font-family: 'Cinzel', cursive;
+  font-weight: 700;
 }
 
 .hide {
@@ -43,5 +45,6 @@ h5 {
 }
 
 .navbar {
-  background-color: rgba(0,0,0,0.8) !important;
+
+  background-color: rgba(0,0,0,0.7) !important;
 }

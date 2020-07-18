@@ -1,6 +1,8 @@
 import utils from '../../helpers/utils';
 import showData from '../../helpers/data/showData';
 
+import './showBuilder.scss';
+
 const showCardBuilder = () => {
   showData.getShows()
     .then((shows) => {
@@ -9,7 +11,7 @@ const showCardBuilder = () => {
                       <h2 class="text-center">Upcoming Events</h2>
                       <button class="btn btn-primary auth-button text-center" id="add-show">Add New Event</button>
                     </div>
-                      <div class="display-flex flex-wrap myShows card-deck">`;
+                      <div class="shows-container myShows">`;
       shows.forEach((show) => {
         domString += `<div class="card text-center show-card grow" id="${show.id}" style="width: 18rem;">
                         <img class="card-img-top" id="show-image" src="${show.imageUrl}" alt="...">
@@ -37,7 +39,7 @@ const noAuthShowCardBuilder = () => {
                     <div class="text-center">
                       <h2 class="text-center">Upcoming Events</h2>
                     </div>
-                      <div class="display-flex flex-wrap myShows card-deck">`;
+                      <div class="shows-container myShows">`;
       shows.forEach((show) => {
         domString += `<div class="card text-center show-card grow" id="${show.id}" style="width: 18rem;">
                         <img class="card-img-top" id="show-image" src="${show.imageUrl}" alt="...">
