@@ -11,10 +11,30 @@ h1 {
   @include title-font(50px);
 }
 
+h5 {
+  @include card-headers(20px);
+}
+
 .fab {
   color: #a44200ff;
 }
 
+#test-home {
+  color: #a44200ff;
+  font-weight: bold;
+  font-size: 1.3em;
+  font-family: 'Cinzel', cursive;
+}
+
+.btn-danger {
+  background-color: #a44200ff;
+  border: none !important;
+}
+
 .hide {
   display: none;
+}
+
+.navbar {
+  background-color: rgb(144, 153, 140) !important;
 }
