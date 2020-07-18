@@ -22,6 +22,16 @@ const newSouvEvent = (e) => {
     .catch((err) => console.error(err));
 };
 
+const removeSouvEvent = (e) => {
+  e.preventDefault();
+  const souvId = e.target.closest('.souv-card').id;
+  souvData.deleteSouv(souvId)
+    .then(() => {
+      souvBuilder.souvCardBuilder();
+    })
+    .catch((err) => console.error(err));
+};
+
 const souvViewEvent = (e) => {
   e.preventDefault();
   $('#souvenirs').removeClass('hide');
@@ -32,6 +42,7 @@ const souvEvents = () => {
   $('body').on('click', '#viewSouv', souvViewEvent);
   $('body').one('click', '#add-souv', addSouv.addSouvForm);
   $('body').one('click', '#souv-adder', newSouvEvent);
+  $('body').on('click', '#delete-souv', removeSouvEvent);
 };
 
 export default { souvEvents };
