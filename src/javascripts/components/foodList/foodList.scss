@@ -2,7 +2,7 @@
   width: 500px;
   margin-left: auto;
   margin-right: auto;
-  
+  text-align: center;
 }
 
 .colored {
@@ -12,3 +12,14 @@
 #add-food {
   margin: 20px;
 }
+
+// table.table-bordered{
+//   border:1px solid #646b61ff!important;
+//   margin-top:20px;
+// }
+// table.table-bordered > thead > tr > th{
+//   border:1px solid #646b61ff!important;
+// }
+// table.table-bordered > tbody > tr > td{
+//   border:1px solid #646b61ff!important;
+// }
