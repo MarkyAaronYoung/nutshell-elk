@@ -1,12 +1,12 @@
 import foodData from '../../helpers/data/foodData';
 import utils from '../../helpers/utils';
+import './editFood.scss';
 
 const showFoodEditForm = (foodId) => {
   foodData.getFoodById(foodId)
     .then((response) => {
       const food = response.data;
       const domString = `
-      <h3 class="text-center">Edit Food</h3>
       <form class="modify-food" id=${foodId}>
         <div class="form-group">
           <label for="addFood-name">Food Name</label>
