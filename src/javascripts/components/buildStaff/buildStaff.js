@@ -1,8 +1,8 @@
 import staffData from '../../helpers/data/staffData';
 import utils from '../../helpers/utils';
-// eslint-disable-next-line import/no-cycle
-import authData from '../../helpers/data/authData';
+// import authData from '../../helpers/data/authData';
 import showForm from '../addStaff/addStaff';
+import staffComponent from './buildStaffers';
 import './buildStaff.scss';
 
 const staffBuilder = (e) => {
@@ -15,34 +15,37 @@ const staffBuilder = (e) => {
                           <div class="d-flex justify-content-center align-items-center">
                           <button class="btn btn-secondary auth-button" id="add-staff">Add</button>
                           </div>
-                          <div class="staff-container"> 
-                          
-      `;
+                          <div class="staff-container">`;
       staffee.forEach((staff) => {
-        domString += `
-               
-               <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="${staff.imageUrl}" alt="${staff.name}">
-                <div class="card-body">
-                  <h5 class="card-title">${staff.name}</h5>
-                  <h5 class="card-title">${staff.jobTitle}</h5>
-                  <button class="btn btn-primary auth-button" id="edit-staff">Edit</button>
-                  <button class="btn btn-secondary auth-button" id="add-staff">Add</button>
-                </div>
-                </div>
-              `;
+        domString += staffComponent.staffMaker(staff);
       });
       domString += '</div><div id="new-staff"></div>';
-      authData.checkLoginStatus();
+      // authData.checkLoginStatus();
       $('#landingPage').addClass('hide');
       utils.printToDom('#staff', domString);
     })
     .catch((err) => console.error(err));
 };
+const buildNewStaff = (e) => {
+  e.preventDefault();
+  const brandNewStaff = {
+    name: $('#addStaff-name').val(),
+    jobTitle: $('#addStaff-jobTitle').val(),
+    imageUrl: $('#addStaff-imageUrl').val(),
+  };
+  console.warn(brandNewStaff);
+  staffData.addStaff(brandNewStaff)
+    .then(() => {
+      staffComponent.staffMaker();
+      utils.printToDom('#new-staff', '');
+    })
+    .catch((err) => console.error('cant add staff', err));
+};
 
 const staffEvents = () => {
   $('body').one('click', '#viewStaff', staffBuilder);
   $('body').one('click', '#add-staff', showForm.showForm);
+  $('body').on('click', '#staff-adder', buildNewStaff);
   $('#components').removeClass('hide');
 };
 
