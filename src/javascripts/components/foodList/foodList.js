@@ -61,8 +61,7 @@ const addFoodEvent = (e) => {
 const removeFoodEvent = (e) => {
   const foodId = e.target.closest('.modify-food').id;
   foodData.deleteFood(foodId)
-    .then((response) => {
-      console.warn(response);
+    .then(() => {
       menu.authFood();
     })
     .catch((err) => console.error('could not delete food', err));

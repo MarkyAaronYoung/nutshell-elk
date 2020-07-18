@@ -2,7 +2,6 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import staffData from '../../helpers/data/staffData';
 import utils from '../../helpers/utils';
-// import authData from '../../helpers/data/authData';
 import showForm from '../addStaff/addStaff';
 import staffBuilder from './buildStaffers';
 import editStaff from '../editStaff/editStaff';
@@ -27,7 +26,6 @@ const buildNewStaff = (e) => {
     jobTitle: $('#addStaff-jobTitle').val(),
     imageUrl: $('#addStaff-imageUrl').val(),
   };
-  console.warn(newEmployee);
   staffData.addStaff(newEmployee)
     .then(() => {
       staffBuilder.staffMakerAuth();

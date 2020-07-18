@@ -5,7 +5,6 @@ const staffEditForm = (staffId) => {
   $('#new-staff').removeClass('hide');
   staffData.getStaffById(staffId)
     .then((response) => {
-      console.error(response);
       const staff = response.data;
       const domString = `
       <form class="modify-staff" id=${staffId}> 
