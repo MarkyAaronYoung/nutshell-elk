@@ -27,10 +27,21 @@ const addShowEvent = (e) => {
     .catch((err) => console.error(err));
 };
 
+const removeShowEvent = (e) => {
+  e.preventDefault();
+  const showId = e.target.closest('.show-card').id;
+  showData.deleteShow(showId)
+    .then(() => {
+      showBuilder.showCardBuilder();
+    })
+    .catch((err) => console.error(err));
+};
+
 const showEvents = () => {
   $('body').one('click', '#viewShows', showViewEvent);
   $('body').on('click', '#add-show', addShow.addShowForm);
   $('body').on('click', '#show-adder', addShowEvent);
+  $('body').on('click', '#delete-show', removeShowEvent);
 };
 
 export default { showEvents };

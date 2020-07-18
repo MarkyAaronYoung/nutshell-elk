@@ -25,4 +25,11 @@ const getShowById = (showId) => axios.get(`${baseUrl}/shows/${showId}.json`);
 
 const addShow = (newShowObj) => axios.post(`${baseUrl}/shows.json`, newShowObj);
 
-export default { getShows, getShowById, addShow };
+const deleteShow = (showId) => axios.delete(`${baseUrl}/shows/${showId}.json`);
+
+export default {
+  getShows,
+  getShowById,
+  addShow,
+  deleteShow,
+};
