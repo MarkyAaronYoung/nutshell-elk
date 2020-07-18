@@ -3,7 +3,6 @@ import utils from '../../helpers/utils';
 const showForm = (e) => {
   e.preventDefault();
   $('#new-staff').removeClass('hide');
-  console.error(e);
   const domString = `
   <form>
   <div class="form-group">

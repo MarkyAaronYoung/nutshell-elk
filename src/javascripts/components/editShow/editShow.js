@@ -3,7 +3,6 @@ import showData from '../../helpers/data/showData';
 
 const editShowForm = (e) => {
   e.preventDefault();
-  console.error(e);
   $('#edit-show').removeClass('hide');
 
   const showId = e.target.closest('.show-card').id;

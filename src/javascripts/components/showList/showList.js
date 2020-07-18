@@ -58,8 +58,6 @@ const editShowEvent = (e) => {
     imageUrl: $('#editShow-imageUrl').val(),
   };
 
-  console.error(e, showId, updatedShow);
-
   showData.editShow(showId, updatedShow)
     .then(() => {
       showBuilder.showCardBuilder();
