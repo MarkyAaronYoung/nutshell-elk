@@ -1,6 +1,5 @@
 import './landingPage.scss';
 import utils from '../../helpers/utils';
-import foodList from '../foodList/foodList';
 
 const addDiv = () => {
   $('#landingPage').removeClass('hide');
@@ -47,13 +46,14 @@ const buildLandingPage = () => {
   utils.printToDom('#landingPage', domString);
 };
 
-const viewEvents = () => {
-  $('body').on('click', '#see-foods', foodList.buildFoods);
+const hideLanding = () => {
+  const domString = '<div class="empty-landing"></div>';
+  utils.printToDom('#landingPage', domString);
 };
 
 export default {
   addDiv,
   removeDiv,
   buildLandingPage,
-  viewEvents,
+  hideLanding,
 };

@@ -13,7 +13,6 @@ const init = () => {
   auth.loginButton();
   auth.logoutButton();
   landing.buildLandingPage();
-  landing.viewEvents();
 };
 
 init();
