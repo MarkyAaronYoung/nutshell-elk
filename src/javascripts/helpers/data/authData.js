@@ -25,6 +25,7 @@ const checkLoginStatus = () => {
       souvList.souvEvents();
       staffList.staffEvents();
       showList.showEvents();
+      foodList.foodListEvents();
     }
   });
 };

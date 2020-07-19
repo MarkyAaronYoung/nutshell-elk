@@ -21,7 +21,7 @@ const buildFoods = (e) => {
       foodData.getFoods()
         .then((foods) => {
           const headerString = `
-          <h1>MENU</h1>
+          <h2>Menu</h2>
           <thead>
           <thead class="colored">
             <tr>
@@ -92,6 +92,7 @@ const editFoodEvent = (e) => {
 };
 
 const foodListEvents = () => {
+  $('body').on('click', '#see-foods', buildFoods);
   $('body').on('click', '#food-adder', addFoodEvent);
   $('body').on('click', '#add-food', addFood.showAddFoodForm);
   $('body').on('click', '#food-delete', removeFoodEvent);

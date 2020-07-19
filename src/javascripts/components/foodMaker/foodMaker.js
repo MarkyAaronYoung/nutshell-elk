@@ -38,7 +38,7 @@ const authFood = () => {
   foodData.getFoods()
     .then((foods) => {
       const headerString = `
-      <h1>MENU</h1>
+      <h2>Menu</h2>
       <div class="text-center" id="food-button">
       <button type="button" id="add-food" class="btn btn-secondary">Add Food</button>
       </div>
