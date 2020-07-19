@@ -4,8 +4,6 @@ import utils from '../../helpers/utils';
 import './addFood.scss';
 
 const showAddFoodForm = () => {
-  // $('#new-food').removeClass('hide');
-  // table.authFood();
   const addString = `
   <tbody>
     <tr class="add-food">
@@ -46,24 +44,6 @@ const showAddFoodForm = () => {
       const domString = `<table class='table table-bordered'>` + headerString + rowString + addString + `</table>` + `<div class="text-center"><button type="submit" class="btn btn-primary" id="food-adder">Add to the List!</button></div>` // eslint-disable-line
       utils.printToDom('#food', domString);
     });
-  // const domString = `
-  // <form>
-  // <div class="form-group">
-  //   <label for="addFood-name">Food Name</label>
-  //   <input type="text" class="form-control" id="addFood-name">
-  // </div>
-  // <div class="form-group">
-  //   <label for="addFood-price">Price $</label>
-  //   <input type="text" class="form-control" id="addFood-price">
-  // </div>
-  // <div class="form-check">
-  //   <input type="checkbox" class="form-check-input" id="addFood-checkbox">
-  //   <label class="form-check-label" for="addFood-checkbox">Is Currently Available</label>
-  // </div>
-  // <button type="submit" class="btn btn-primary" id="food-adder">Add to the List!</button>
-  // </form>
-  // `;
-  // utils.printToDom('#food', domString);
 };
 
 export default { showAddFoodForm };
