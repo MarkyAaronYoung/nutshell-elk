@@ -26,7 +26,7 @@ const buildFoods = (e) => {
           <thead class="colored">
             <tr>
               <th scope="col">Food</th>
-              <th scope="col">Price</th>
+              <th scope="col">Price $</th>
             </tr>
           </thead>
           `;

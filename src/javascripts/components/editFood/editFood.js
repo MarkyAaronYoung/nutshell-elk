@@ -13,7 +13,7 @@ const showFoodEditForm = (foodId) => {
           <input type="text" class="form-control" id="editFood-name" value="${food.name}">
         </div>
         <div class="form-group">
-          <label for="addFood-price">Price $</label>
+          <label for="addFood-price">Price</label>
           <input type="text" class="form-control" id="editFood-price" value=${food.price}>
         </div>
         <div class="form-check">
