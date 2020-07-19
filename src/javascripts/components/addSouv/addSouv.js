@@ -3,7 +3,6 @@ import './addSouv.scss';
 
 const addSouvForm = (e) => {
   e.preventDefault();
-  console.error(e);
   $('#new-souv').removeClass('hide');
   const domString = `<form>
                       <div class="form-group">

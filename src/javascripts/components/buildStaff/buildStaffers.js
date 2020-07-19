@@ -22,7 +22,6 @@ const staffMakerAuth = () => {
         </div>`;
       });
       domString += '</div>';
-      // authData.checkLoginStatus();
       $('#landingPage').addClass('hide');
       utils.printToDom('#staff', domString);
     })
@@ -47,7 +46,6 @@ const staffMakerNoAuth = () => {
         </div>`;
       });
       domString += '</div>';
-      // authData.checkLoginStatus();
       $('#landingPage').addClass('hide');
       utils.printToDom('#staff', domString);
     })

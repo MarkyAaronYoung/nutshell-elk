@@ -7,13 +7,13 @@ import landing from './components/landingPage/landingPage';
 import home from './components/navBar/navbar';
 
 const init = () => {
+  home.resetPage();
   firebase.initializeApp(apiKeys.firebaseConfig);
   authData.checkLoginStatus();
   auth.loginButton();
   auth.logoutButton();
   landing.buildLandingPage();
   landing.viewEvents();
-  home.resetPage();
 };
 
 init();
