@@ -1,17 +1,17 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-
 import foodData from '../../helpers/data/foodData';
 import addFood from '../addFood/addFood';
 import editFood from '../editFood/editFood';
 import menu from '../foodMaker/foodMaker';
 import utils from '../../helpers/utils';
-
+// eslint-disable-next-line import/no-cycle
+import landingPage from '../landingPage/landingPage';
 import './foodList.scss';
 
 const buildFoods = (e) => {
   e.preventDefault();
-  $('#landingPage').addClass('hide');
+  landingPage.hideLanding();
   $('#food').removeClass('hide');
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {

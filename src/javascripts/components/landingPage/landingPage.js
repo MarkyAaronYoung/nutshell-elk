@@ -47,6 +47,10 @@ const buildLandingPage = () => {
   utils.printToDom('#landingPage', domString);
 };
 
+const hideLanding = () => {
+  const domString = '<div class="empty-landing"></div>';
+  utils.printToDom('#landingPage', domString);
+};
 const viewEvents = () => {
   $('body').on('click', '#see-foods', foodList.buildFoods);
 };
@@ -56,4 +60,5 @@ export default {
   removeDiv,
   buildLandingPage,
   viewEvents,
+  hideLanding,
 };
