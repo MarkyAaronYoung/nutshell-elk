@@ -12,7 +12,7 @@ const logoutEvent = () => {
 const resetPage = () => {
   $('#test-home').click((e) => {
     e.preventDefault();
-    $('#landingPage').removeClass('hide');
+    landingPage.buildLandingPage();
     $('#food').addClass('hide');
     $('#new-food').addClass('hide');
     $('#edit-food').addClass('hide');

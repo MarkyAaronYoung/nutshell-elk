@@ -1,5 +1,6 @@
 import staffData from '../../helpers/data/staffData';
 import utils from '../../helpers/utils';
+import landingPage from '../landingPage/landingPage';
 
 const staffMakerAuth = () => {
   staffData.getStaff()
@@ -22,7 +23,7 @@ const staffMakerAuth = () => {
         </div>`;
       });
       domString += '</div>';
-      $('#landingPage').addClass('hide');
+      landingPage.hideLanding();
       utils.printToDom('#staff', domString);
     })
     .catch((err) => console.error(err));
@@ -46,7 +47,7 @@ const staffMakerNoAuth = () => {
         </div>`;
       });
       domString += '</div>';
-      $('#landingPage').addClass('hide');
+      landingPage.hideLanding();
       utils.printToDom('#staff', domString);
     })
     .catch((err) => console.error(err));

@@ -1,5 +1,6 @@
 import utils from '../../helpers/utils';
 import souvData from '../../helpers/data/souvData';
+import landingPage from '../landingPage/landingPage';
 
 import './souvBuilder.scss';
 
@@ -43,7 +44,7 @@ const souvCardBuilder = () => {
       });
 
       domString += '</div>';
-      $('#landingPage').addClass('hide');
+      landingPage.hideLanding();
       utils.printToDom('#souvenirs', domString);
     })
     .catch((err) => console.error(err));
@@ -84,7 +85,7 @@ const noAuthSouvCardBuilder = () => {
       });
 
       domString += '</div>';
-      $('#landingPage').addClass('hide');
+      landingPage.hideLanding();
       utils.printToDom('#souvenirs', domString);
     })
     .catch((err) => console.error(err));

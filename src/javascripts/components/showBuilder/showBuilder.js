@@ -1,6 +1,8 @@
 import utils from '../../helpers/utils';
 import showData from '../../helpers/data/showData';
 
+import landingPage from '../landingPage/landingPage';
+
 import './showBuilder.scss';
 
 const showCardBuilder = () => {
@@ -26,7 +28,7 @@ const showCardBuilder = () => {
       });
 
       domString += '</div>';
-      $('#landingPage').addClass('hide');
+      landingPage.hideLanding();
       utils.printToDom('#shows', domString);
     })
     .catch((err) => console.error(err));
@@ -52,7 +54,7 @@ const noAuthShowCardBuilder = () => {
       });
 
       domString += '</div>';
-      $('#landingPage').addClass('hide');
+      landingPage.hideLanding();
       utils.printToDom('#shows', domString);
     })
     .catch((err) => console.error(err));
