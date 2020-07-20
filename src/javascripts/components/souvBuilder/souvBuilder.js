@@ -23,8 +23,8 @@ const souvCardBuilder = () => {
                             <h3 class="card-title">${souv.name}</h3>
                             <h4>$${souv.price}</h4>
                             <p>${souv.description}</p>
-                            <button class="btn btn-primary auth-button" id="update-souv">Edit</button>
-                            <button class="btn btn-primary auth-button" id="delete-souv">Delete</button>
+                            <button class="btn btn-primary auth-button" id="update-souv"><i class="fas fa-user-edit"></i></button>
+                            <button class="btn btn-primary auth-button" id="delete-souv"><i class="fas fa-trash-alt"></i></button>
                           </div>
                         </div>`;
         } else {
@@ -36,8 +36,8 @@ const souvCardBuilder = () => {
                             <h4>$${souv.price}</h4>
                             <p>${souv.description}</p>
                             <p>SOLD OUT!</P>
-                            <button class="btn btn-primary auth-button" id="update-souv">Edit</button>
-                            <button class="btn btn-primary auth-button" id="delete-souv">Delete</button>
+                            <button class="btn btn-primary auth-button" id="update-souv"><i class="fas fa-user-edit"></i></button>
+                            <button class="btn btn-primary auth-button" id="delete-souv"><i class="fas fa-trash-alt"></i></button>
                           </div>
                         </div>`;
         }
