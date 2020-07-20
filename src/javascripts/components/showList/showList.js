@@ -61,7 +61,7 @@ const editShowEvent = (e) => {
   showData.editShow(showId, updatedShow)
     .then(() => {
       showBuilder.showCardBuilder();
-      utils.printToDom('#edit-show', '');
+      utils.printToDom('#new-show', '');
     })
     .catch((err) => console.error(err));
 };

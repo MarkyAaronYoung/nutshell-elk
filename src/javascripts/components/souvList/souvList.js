@@ -50,7 +50,7 @@ const editSouvEvent = (e) => {
   souvData.editSouv(souvId, updatedSouv)
     .then(() => {
       souvBuilder.souvCardBuilder();
-      utils.printToDom('#edit-souv', '');
+      utils.printToDom('#new-souv', '');
     })
     .catch((err) => console.error(err));
 };
