@@ -1,13 +1,8 @@
 import utils from '../../helpers/utils';
 import souvData from '../../helpers/data/souvData';
 
-const editSouvForm = (e) => {
-  e.preventDefault();
-  $('#edit-souv').removeClass('hide');
-
-  const souvId = e.target.closest('.souv-card').id;
+const editSouvForm = (souvId) => {
   let domString = '';
-
   souvData.getSouvById(souvId)
     .then((response) => {
       const souv = response.data;
@@ -34,7 +29,7 @@ const editSouvForm = (e) => {
                       </div>
                       <button type="submit" class="btn btn-primary" id="souv-editor">Update!</button>
                     </form>`;
-      utils.printToDom('#edit-souv', domString);
+      utils.printToDom('#new-souv', domString);
     })
     .catch((err) => console.error(err));
 };

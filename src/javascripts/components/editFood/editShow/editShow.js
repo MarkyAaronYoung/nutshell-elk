@@ -25,7 +25,7 @@ const editShowForm = (showId) => {
                       </div>
                       <button type="submit" class="btn btn-primary" id="show-editor">Update!</button>
                     </form>`;
-      utils.printToDom('#new-show', domString);
+      utils.printToDom('#edit-show', domString);
     })
     .catch((err) => console.error(err));
 };

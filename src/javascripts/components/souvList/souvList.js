@@ -67,12 +67,20 @@ const souvViewEvent = (e) => {
   });
 };
 
+const editSouvFormEvent = (e) => {
+  e.preventDefault();
+  $('#new-souv').removeClass('hide');
+  const souvId = e.target.closest('.souv-card').id;
+
+  editSouv.editSouvForm(souvId);
+};
+
 const souvEvents = () => {
   $('body').on('click', '#viewSouv', souvViewEvent);
   $('body').on('click', '#add-souv', addSouv.addSouvForm);
   $('body').on('click', '#souv-adder', newSouvEvent);
   $('body').on('click', '#delete-souv', removeSouvEvent);
-  $('body').on('click', '#update-souv', editSouv.editSouvForm);
+  $('body').on('click', '#update-souv', editSouvFormEvent);
   $('body').on('click', '#souv-editor', editSouvEvent);
 };
 
