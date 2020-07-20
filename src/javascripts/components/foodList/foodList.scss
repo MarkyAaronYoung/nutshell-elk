@@ -22,7 +22,7 @@ table.table-bordered{
   border:1px solid #646b61ff!important;
   margin-top:20px;
 }
-table.table-bordered > thead > tr > th{
+table.table-bordered > thead > tr{
   border:1px solid #646b61ff!important;
 }
 table.table-bordered > tbody > tr > td{
@@ -33,11 +33,12 @@ table.table-bordered > tbody > tr > td{
   border:1px solid #646b61ff!important;
 }
 
+tbody {
+  border: 1px solid #646b61ff !important;
+}
 
 .btn-dark, #add-food {
   background-color: #646b61ff !important;
   border: none;
   font-family: 'David Libre', serif;
 }
-
-
