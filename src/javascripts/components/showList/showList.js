@@ -66,12 +66,20 @@ const editShowEvent = (e) => {
     .catch((err) => console.error(err));
 };
 
+const editFormEvent = (e) => {
+  e.preventDefault();
+  $('#new-show').removeClass('hide');
+  const showId = e.target.closest('.show-card').id;
+  console.error(showId);
+  editShow.editShowForm(showId);
+};
+
 const showEvents = () => {
   $('body').on('click', '#viewShows', showViewEvent);
   $('body').on('click', '#add-show', addShow.addShowForm);
   $('body').on('click', '#show-adder', addShowEvent);
   $('body').on('click', '#delete-show', removeShowEvent);
-  $('body').on('click', '#update-show', editShow.editShowForm);
+  $('body').on('click', '#update-show', editFormEvent);
   $('body').on('click', '#show-editor', editShowEvent);
 };
 
