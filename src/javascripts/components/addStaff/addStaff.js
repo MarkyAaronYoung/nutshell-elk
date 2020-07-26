@@ -13,12 +13,16 @@ const showForm = (e) => {
     <label for="addStaff-jobTitle">Job Title</label>
     <input type="text" class="form-control" id="addStaff-jobTitle">
   </div>
-<div class="form-group">
+  <div class="form-group">
+    <label for="addStaff-price">Price</label>
+    <input type="text" class="form-control" id="addStaff-price">
+  </div> 
+  <div class="form-group">
     <label for="addStaff-imageUrl">Image Url</label>
     <input type="text" class="form-control" id="addStaff-imageUrl">
   </div>
   <button type="submit" class="btn btn-primary" id="staff-adder">Update!</button>
-</form>
+  </form>
   `;
   utils.printToDom('#new-staff', domString);
 };

@@ -20,6 +20,10 @@ const editShowForm = (showId) => {
                         <input type="text" class="form-control" id="editShow-description" value="${show.description}">
                       </div>
                       <div class="form-group">
+                        <label for="editShow-price">Price</label>
+                        <input type="text" class="form-control" id="editShow-price" value="${show.price}">
+                      </div>
+                      <div class="form-group">
                         <label for="editShow-imageUrl">Event Image Url</label>
                         <input type="text" class="form-control" id="editShow-imageUrl" value="${show.imageUrl}">
                       </div>

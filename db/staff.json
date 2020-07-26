@@ -2,16 +2,19 @@
   "staff1": {
       "name": "Inigo Montoya",
       "jobTitle":  "Entertainer",
+      "price": 25,
       "imageUrl": "https://trianglesmartdivorce.com/wp-content/uploads/2019/03/2012022436ic3b1igo-montoya.jpg"
   },
   "staff2": {
       "name": "Fezzik",
       "jobTitle": "Security",
+      "price": 25,
       "imageUrl": "https://www.crazyus.com/wp-content/uploads/2012/03/crazyus.3.13.12.HelloLady.jpg"
   },
   "staff3": {
       "name": "Buttercup",
-      "jobTitle": "Queen",
+      "jobTitle": "Princess",
+      "price": 15,
       "imageUrl": "https://i.ytimg.com/vi/qFhOMnsnOWI/maxresdefault.jpg"
   }
 }

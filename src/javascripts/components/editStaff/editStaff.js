@@ -16,12 +16,16 @@ const staffEditForm = (staffId) => {
         <label for="editStaff-jobTitle">Job Title</label>
         <input type="text" class="form-control" id="editStaff-jobTitle" value="${staff.jobTitle}">
       </div>
-    <div class="form-group">
+      <div class="form-group">
+        <label for="editStaff-price">Price</label>
+        <input type="text" class="form-control" id="editStaff-price" value="${staff.price}">
+      </div>
+      <div class="form-group">
         <label for="editStaff-imageUrl">Image Url</label>
         <input type="text" class="form-control" id="editStaff-imageUrl" value="${staff.imageUrl}">
       </div>
       <button type="submit" class="btn btn-primary" id="staff-update">Update!</button>
-    </form>`;
+      </form>`;
       utils.printToDom('#new-staff', domString);
     })
     .catch((err) => console.error('cant not get single staff member', err));

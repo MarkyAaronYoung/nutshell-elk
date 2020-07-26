@@ -24,6 +24,7 @@ const buildNewStaff = (e) => {
   const newEmployee = {
     name: $('#addStaff-name').val(),
     jobTitle: $('#addStaff-jobTitle').val(),
+    price: $('#addStaff-price').val(),
     imageUrl: $('#addStaff-imageUrl').val(),
   };
   staffData.addStaff(newEmployee)
@@ -56,6 +57,7 @@ const editStaffEvent = (e) => {
   const editedStaff = {
     name: $('#editStaff-name').val(),
     jobTitle: $('#editStaff-jobTitle').val(),
+    price: $('#editStaff-price').val(),
     imageUrl: $('#editStaff-imageUrl').val(),
   };
 
