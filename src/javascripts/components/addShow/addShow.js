@@ -18,6 +18,10 @@ const addShowForm = (e) => {
                         <input type="text" class="form-control" id="addShow-description">
                       </div>
                       <div class="form-group">
+                        <label for="addShow-price">Price</label>
+                        <input type="text" class="form-control" id="addShow-price">
+                      </div>
+                      <div class="form-group">
                         <label for="addShow-imageUrl">Event Image Url</label>
                         <input type="text" class="form-control" id="addShow-imageUrl">
                       </div>
