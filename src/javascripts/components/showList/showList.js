@@ -72,7 +72,6 @@ const editFormEvent = (e) => {
   e.preventDefault();
   $('#new-show').removeClass('hide');
   const showId = e.target.closest('.show-card').id;
-  console.error(showId);
   editShow.editShowForm(showId);
 };
 
