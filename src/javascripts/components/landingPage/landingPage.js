@@ -8,6 +8,7 @@ const addDiv = () => {
 const removeDiv = () => {
   $('#landingPage').addClass('hide');
 };
+
 const buildLandingPage = () => {
   const domString = `
   <h1 class="landingPage">Free-Lancer</h1>
@@ -41,7 +42,14 @@ const buildLandingPage = () => {
         <button class="btn btn-primary view" id="viewStaff">View</button>
       </div>
     </div>
-  </div>
+    <div class="card grow" style="width: 18rem;">
+      <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRhnLPrjuZ2ELonB3SQnXvtrIeYNISk7hEX8Q&usqp=CAU">
+      <div class="card-body">
+        <h5 class="card-title">Events</h5>
+        <button class="btn btn-primary view" id="viewEvents">View</button>
+      </div>
+    </div>
+    </div>
   `;
   utils.printToDom('#landingPage', domString);
 };
