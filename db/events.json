@@ -1,0 +1,26 @@
+{
+  "event1": {
+      "name": "Brooke's Birthday",
+      "foodId": "food1, food2",
+      "staffId": "staff1, staff2",
+      "souvenirId": "souvenir1, souvenir2",
+      "showId": "show1",
+      "userId": "hQX3AOTCnhRcuYLMCKsTHNvNcPC3"
+  },
+  "event2": {
+    "name": "Ponch's Bar Mitzvah",
+    "foodId": "food3",
+    "staffId": "staff3",
+    "souvenirId": "souvenir2",
+    "showId": "show1",
+    "userId": "swXGfXXSQifyVjN7AebbbsAUTPB3"
+  },
+  "event3": {
+    "name": "Mark's Honeymoon",
+    "foodId": "food4",
+    "staffId": "staff2, staff 1",
+    "souvenirId": "souvenir1",
+    "showId": "show1, show2",
+    "userId": "ikazf8WRTqXtjlPMh4Rtp49eShk2"
+  }
+}
