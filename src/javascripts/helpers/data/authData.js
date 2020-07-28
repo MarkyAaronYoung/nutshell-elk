@@ -18,6 +18,7 @@ const checkLoginStatus = () => {
       staffList.staffEvents();
       showList.showEvents();
       foodList.foodListEvents();
+      $('#events-card').show();
     } else {
       $('.auth-button').addClass('hide');
       loginButton.removeClass('hide');
@@ -26,6 +27,7 @@ const checkLoginStatus = () => {
       staffList.staffEvents();
       showList.showEvents();
       foodList.foodListEvents();
+      $('#events-card').hide();
     }
   });
 };

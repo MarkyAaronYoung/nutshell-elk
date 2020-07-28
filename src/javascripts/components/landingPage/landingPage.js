@@ -42,7 +42,7 @@ const buildLandingPage = () => {
         <button class="btn btn-primary view" id="viewStaff">View</button>
       </div>
     </div>
-    <div class="card grow" style="width: 18rem;">
+    <div id="events-card" class="card grow" style="width: 18rem;">
       <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRhnLPrjuZ2ELonB3SQnXvtrIeYNISk7hEX8Q&usqp=CAU">
       <div class="card-body">
         <h5 class="card-title">Events</h5>
