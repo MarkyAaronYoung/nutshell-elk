@@ -26,7 +26,6 @@ const addShowEvent = (e) => {
   const newShowObj = {
     name: $('#addShow-name').val(),
     length: $('#addShow-length').val(),
-    price: $('#addShow-price').val(),
     description: $('#addShow-description').val(),
     imageUrl: $('#addShow-imageUrl').val(),
   };
@@ -55,7 +54,6 @@ const editShowEvent = (e) => {
   const updatedShow = {
     name: $('#editShow-name').val(),
     length: $('#editShow-length').val(),
-    price: $('#editShow-price').val(),
     description: $('#editShow-description').val(),
     imageUrl: $('#editShow-imageUrl').val(),
   };
@@ -72,6 +70,7 @@ const editFormEvent = (e) => {
   e.preventDefault();
   $('#new-show').removeClass('hide');
   const showId = e.target.closest('.show-card').id;
+  console.error(showId);
   editShow.editShowForm(showId);
 };
 

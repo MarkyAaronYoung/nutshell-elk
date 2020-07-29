@@ -48,8 +48,7 @@ const buildLandingPage = () => {
         <h5 class="card-title">Events</h5>
         <button class="btn btn-primary view" id="viewEvents">View</button>
       </div>
-    </div>
-    </div>
+  </div>
   `;
   utils.printToDom('#landingPage', domString);
 };
