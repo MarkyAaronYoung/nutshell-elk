@@ -24,4 +24,4 @@ const getEvents = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export { getEvents };
+export default { getEvents };
