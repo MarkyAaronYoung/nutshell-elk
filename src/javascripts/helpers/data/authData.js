@@ -4,6 +4,7 @@ import souvList from '../../components/souvList/souvList';
 import staffList from '../../components/buildStaff/buildStaff';
 import showList from '../../components/showList/showList';
 import foodList from '../../components/foodList/foodList';
+import eventsList from '../../components/eventsList/eventsList';
 
 const checkLoginStatus = () => {
   const logoutButton = $('#navbar-logout-button');
@@ -19,6 +20,7 @@ const checkLoginStatus = () => {
       showList.showEvents();
       foodList.foodListEvents();
       $('#events-card').show();
+      eventsList.eventEvents();
     } else {
       $('.auth-button').addClass('hide');
       loginButton.removeClass('hide');
