@@ -8,6 +8,7 @@ const addDiv = () => {
 const removeDiv = () => {
   $('#landingPage').addClass('hide');
 };
+
 const buildLandingPage = () => {
   const domString = `
   <h1 class="landingPage">Free-Lancer</h1>
