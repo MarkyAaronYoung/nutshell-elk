@@ -19,6 +19,7 @@ const checkLoginStatus = () => {
       staffList.staffEvents();
       showList.showEvents();
       foodList.foodListEvents();
+      $('#events-card').show();
       eventsList.eventEvents();
     } else {
       $('.auth-button').addClass('hide');
@@ -28,6 +29,7 @@ const checkLoginStatus = () => {
       staffList.staffEvents();
       showList.showEvents();
       foodList.foodListEvents();
+      $('#events-card').hide();
     }
   });
 };
