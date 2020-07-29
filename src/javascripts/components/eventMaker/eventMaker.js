@@ -6,18 +6,13 @@ const eventPageMaker = () => {
   eventData.getEvents()
     .then((events) => {
       console.warn('event', events);
-      let domString = '';
+      let domString = '<h1 class="text-center">Renassaince Fair Events<h1>';
       events.forEach((event) => {
         domString += `
-        <h1>${event.name}</h1>
-        <div class="col-3">
-          <div class="card border-0 rounded-0 bg-dark text-light" id=${event.foodId}>
-          <div class="card-header text-center">${event.staffId}</div>
-        </div> 
-        <div class="col-3">
-        <div class="card border-0 rounded-0 bg-dark text-light" id=${event.souvenirId}>
-          <div class="card-header text-center">${event.showId}</div>
-        </div>  
+        <div class="details">
+        <h2>${event.name}</h2>
+        <button class=“btn btn-primary view" id="viewEventDetails">View Event Details</button>
+        </div>
       `;
       });
       utils.printToDom('#events-page', domString);
