@@ -2,8 +2,6 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import utils from '../../helpers/utils';
 
-// import landingPage from '../landingPage/landingPage';
-
 const signMeIn = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(provider);
@@ -19,7 +17,6 @@ const logoutButton = () => {
   $('#navbar-logout-button').click((e) => {
     e.preventDefault();
     firebase.auth().signOut();
-    // landingPage.buildLandingPage();
   });
 };
 

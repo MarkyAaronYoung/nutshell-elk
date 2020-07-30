@@ -25,8 +25,27 @@ const resetPage = () => {
     $('#staff').addClass('hide');
     $('#new-staff').addClass('hide');
     $('#edit-staff').addClass('hide');
-    landingPage.buildLandingPage();
   });
 };
 
-export default { logoutEvent, resetPage };
+const eventsResetPage = () => {
+  $('#test-home').click((e) => {
+    e.preventDefault();
+    landingPage.eventsLandingPage();
+    $('#food').addClass('hide');
+    $('#new-food').addClass('hide');
+    $('#edit-food').addClass('hide');
+    $('#souvenirs').addClass('hide');
+    $('#new-souv').addClass('hide');
+    $('#edit-souv').addClass('hide');
+    $('#shows').addClass('hide');
+    $('#new-show').addClass('hide');
+    $('#edit-show').addClass('hide');
+    $('#staff').addClass('hide');
+    $('#new-staff').addClass('hide');
+    $('#edit-staff').addClass('hide');
+    $('#events-page').addClass('hide');
+  });
+};
+
+export default { logoutEvent, resetPage, eventsResetPage };
