@@ -20,5 +20,6 @@ const getEvents = () => new Promise((resolve, reject) => {
 });
 
 const getEventById = (eventId) => axios.get(`${baseUrl}/events/${eventId}.json`);
+const addEvent = (newEventObj) => axios.post(`${baseUrl}/events.json`, newEventObj);
 
-export default { getEvents, getEventById };
+export default { getEvents, addEvent, getEventById };

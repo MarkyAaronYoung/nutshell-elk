@@ -6,15 +6,15 @@ const addShowForm = (e) => {
   $('#new-show').removeClass('hide');
   const domString = `<form>
                       <div class="form-group">
-                        <label for="addShow-name">Event Name</label>
+                        <label for="addShow-name">Show Name</label>
                         <input type="text" class="form-control" id="addShow-name">
                       </div>
                       <div class="form-group">
-                        <label for="addShow-length">Event Length</label>
+                        <label for="addShow-length">Show Length</label>
                         <input type="text" class="form-control" id="addShow-length">
                       </div>
                       <div class="form-group">
-                        <label for="addShow-description">Event Description</label>
+                        <label for="addShow-description">Show Description</label>
                         <input type="text" class="form-control" id="addShow-description">
                       </div>
                       <div class="form-group">
@@ -22,7 +22,7 @@ const addShowForm = (e) => {
                         <input type="text" class="form-control" id="addShow-price">
                       </div>
                       <div class="form-group">
-                        <label for="addShow-imageUrl">Event Image Url</label>
+                        <label for="addShow-imageUrl">Show Image Url</label>
                         <input type="text" class="form-control" id="addShow-imageUrl">
                       </div>
                       <button type="submit" class="btn btn-primary" id="show-adder">Update!</button>
