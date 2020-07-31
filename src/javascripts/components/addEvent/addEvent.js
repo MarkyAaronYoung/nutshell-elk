@@ -10,7 +10,7 @@ const addNewEventForm = (e) => {
       </div>
     <button type="submit" class="btn btn-light" id="event-adder">Update!</button>
     </form>`;
-  utils.printToDom('#add-event', domString);
+  utils.printToDom('#new-event', domString);
 };
 
 export default { addNewEventForm };
