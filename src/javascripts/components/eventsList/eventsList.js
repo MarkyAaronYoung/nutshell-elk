@@ -1,7 +1,11 @@
 import eventPageComponent from '../eventMaker/eventMaker';
+import addEvent from '../addEvent/addEvent';
+
+import smash from '../../helpers/data/smash';
+import eventData from '../../helpers/data/eventData';
+import utils from '../../helpers/utils';
 
 import './eventsList.scss';
-import smash from '../../helpers/data/smash';
 
 const viewEvents = () => {
   $('#events-page').removeClass('hide');
@@ -19,8 +23,6 @@ const viewIndividualEvent = (e) => {
   $('#individual-event').removeClass('hide');
 };
 
-<<<<<<< Updated upstream
-=======
 const addNewEvent = (e) => {
   e.preventDefault();
   const newEventObj = {
@@ -35,9 +37,10 @@ const addNewEvent = (e) => {
     .catch((err) => console.error(err));
 };
 
->>>>>>> Stashed changes
 const eventEvents = () => {
   $('body').on('click', '#viewEvents', viewEvents);
+  $('body').on('click', '#add-event', addEvent.addNewEventForm);
+  $('body').on('click', '#event-adder', addNewEvent);
 };
 
 const individualEventEvents = () => {
