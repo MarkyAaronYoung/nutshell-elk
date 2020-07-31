@@ -12,11 +12,11 @@ const editShowForm = (showId) => {
                         <input type="text" class="form-control" id="editShow-name" value="${show.name}">
                       </div>
                       <div class="form-group">
-                        <label for="editShow-length">Event Length</label>
+                        <label for="editShow-length">Show Length</label>
                         <input type="text" class="form-control" id="editShow-length" value="${show.length}">
                       </div>
                       <div class="form-group">
-                        <label for="editShow-description">Event Description</label>
+                        <label for="editShow-description">Show Description</label>
                         <input type="text" class="form-control" id="editShow-description" value="${show.description}">
                       </div>
                       <div class="form-group">
@@ -24,7 +24,7 @@ const editShowForm = (showId) => {
                         <input type="text" class="form-control" id="editShow-price" value="${show.price}">
                       </div>
                       <div class="form-group">
-                        <label for="editShow-imageUrl">Event Image Url</label>
+                        <label for="editShow-imageUrl">Show Image Url</label>
                         <input type="text" class="form-control" id="editShow-imageUrl" value="${show.imageUrl}">
                       </div>
                       <button type="submit" class="btn btn-primary" id="show-editor">Update!</button>

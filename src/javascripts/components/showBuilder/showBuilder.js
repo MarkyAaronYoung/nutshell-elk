@@ -10,8 +10,8 @@ const showCardBuilder = () => {
     .then((shows) => {
       let domString = `
                     <div class="text-center">
-                      <h2 class="text-center">Upcoming Events</h2>
-                      <button class="btn btn-primary auth-button text-center" id="add-show">Add New Event</button>
+                      <h2 class="text-center">Upcoming Shows</h2>
+                      <button class="btn btn-primary auth-button text-center" id="add-show">Add New Show</button>
                     </div>
                       <div class="shows-container myShows">`;
       shows.forEach((show) => {
@@ -40,7 +40,7 @@ const noAuthShowCardBuilder = () => {
     .then((shows) => {
       let domString = `
                     <div class="text-center">
-                      <h2 class="text-center">Upcoming Events</h2>
+                      <h2 class="text-center">Upcoming Shows</h2>
                     </div>
                       <div class="shows-container myShows">`;
       shows.forEach((show) => {
