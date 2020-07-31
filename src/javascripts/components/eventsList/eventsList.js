@@ -1,11 +1,19 @@
 import eventPageComponent from '../eventMaker/eventMaker';
 import addEvent from '../addEvent/addEvent';
 
+<<<<<<< HEAD
 import smash from '../../helpers/data/smash';
 import eventData from '../../helpers/data/eventData';
 import utils from '../../helpers/utils';
 
 import './eventsList.scss';
+=======
+import './eventsList.scss';
+
+import smash from '../../helpers/data/smash';
+import eventData from '../../helpers/data/eventData';
+import utils from '../../helpers/utils';
+>>>>>>> 48bccd2904ec3f1ce97b959159e6231429102dff
 
 const viewEvents = () => {
   $('#events-page').removeClass('hide');
@@ -23,12 +31,19 @@ const viewIndividualEvent = (e) => {
   $('#individual-event').removeClass('hide');
 };
 
+<<<<<<< HEAD
 const addNewEvent = (e) => {
   e.preventDefault();
   const newEventObj = {
     name: $('#addEvent-name').val(),
   };
 
+=======
+const addNewEvent = () => {
+  const newEventObj = {
+    name: $('#addEvent-name').val(),
+  };
+>>>>>>> 48bccd2904ec3f1ce97b959159e6231429102dff
   eventData.addEvent(newEventObj)
     .then(() => {
       eventPageComponent.eventPageMaker();
