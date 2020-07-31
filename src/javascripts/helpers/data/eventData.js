@@ -20,5 +20,10 @@ const getEvents = () => new Promise((resolve, reject) => {
 });
 
 const getEventById = (eventId) => axios.get(`${baseUrl}/events/${eventId}.json`);
+<<<<<<< Updated upstream
+=======
+
+const addEvent = (newEventObj) => axios.post(`${baseUrl}/events.json`, newEventObj);
+>>>>>>> Stashed changes
 
 export default { getEvents, getEventById };
