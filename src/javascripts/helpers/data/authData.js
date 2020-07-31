@@ -25,6 +25,7 @@ const checkLoginStatus = () => {
       showList.showEvents();
       foodList.foodListEvents();
       eventsList.eventEvents();
+      eventsList.individualEventEvents();
     } else {
       $('.auth-button').addClass('hide');
       loginButton.removeClass('hide');
