@@ -3,7 +3,7 @@ const buildEvents = (event) => {
                       <div id=${event.id} class="card text-center event-card grow" style="width: 18rem;">
                         <div class="card-body">
                           <h5 class="card-title">${event.name}</h5>
-                          <a href="#" class="btn btn-primary">View Event Details</a>
+                          <button id="viewIndividualEvent" class="btn btn-primary view">View Event Details</button>
                         </div>
                       </div>`;
   return domString;
