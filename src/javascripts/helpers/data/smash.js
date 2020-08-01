@@ -10,22 +10,18 @@ const getSingleEventInfo = (eventId) => new Promise((resolve, reject) => {
       const event = response.data;
 
       foodsData.getFoodById(event.foodId).then((food) => {
-        event.food = food;
+        event.food = food.data;
+        staffData.getStaffById(event.staffId).then((staff) => {
+          event.staff = staff.data;
+          showData.getShowById(event.showId).then((show) => {
+            event.show = show.data;
+            souvData.getSouvById(event.souvenirId).then((souv) => {
+              event.souv = souv.data;
+              resolve(event);
+            });
+          });
+        });
       });
-
-      staffData.getStaffById(event.staffId).then((staff) => {
-        event.staff = staff;
-      });
-
-      showData.getShowById(event.showId).then((show) => {
-        event.show = show;
-      });
-
-      souvData.getSouvById(event.souvenirId).then((souv) => {
-        event.souv = souv;
-      });
-
-      resolve(event);
     })
     .catch((err) => reject(err));
 });
