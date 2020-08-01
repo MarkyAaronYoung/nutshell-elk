@@ -1,6 +1,7 @@
 import utils from '../../helpers/utils';
 import foodData from '../../helpers/data/foodData';
 import staffData from '../../helpers/data/staffData';
+import souvData from '../../helpers/data/souvData';
 
 const createFoodSelectList = () => {
   let domString = `
@@ -34,6 +35,22 @@ const createStaffSelectList = () => {
     });
 };
 
+const createSouvSelectList = () => {
+  let domString = `
+    <label for="eventFoodSelect">Choose Food:</label>
+    <select name="foods" id="eventFoodSelect">
+  `;
+
+  souvData.getSouv()
+    .then((souvs) => {
+      souvs.forEach((souv) => {
+        domString += `<option value=${souv.id}>${souv.name}</option>`;
+      });
+      domString += '</select>';
+      utils.printToDom('#eventSouvLander', domString);
+    });
+};
+
 const addNewEventForm = (e) => {
   e.preventDefault();
   $('#new-event').removeClass('hide');
@@ -44,11 +61,13 @@ const addNewEventForm = (e) => {
       </div>
       <div class="form-group" id="eventFoodLander"></div>
       <div class="form-group" id="eventStaffLander"></div>
+      <div class="form-group" id="eventSouvLander"></div>
       <button type="submit" class="btn btn-light" id="event-adder">Update!</button>
     </form>`;
   utils.printToDom('#new-event', domString);
   createFoodSelectList();
   createStaffSelectList();
+  createSouvSelectList();
 };
 
 export default { addNewEventForm };
