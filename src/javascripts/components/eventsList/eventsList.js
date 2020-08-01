@@ -1,5 +1,6 @@
 import eventPageComponent from '../eventMaker/eventMaker';
 import addEvent from '../addEvent/addEvent';
+import foodData from '../../helpers/data/foodData';
 
 import smash from '../../helpers/data/smash';
 import eventData from '../../helpers/data/eventData';
@@ -16,7 +17,133 @@ const viewIndividualEvent = (e) => {
   const eventId = e.target.closest('.event-card').id;
   smash.getSingleEventInfo(eventId)
     .then((event) => {
+      const domString = `
+      <h2 class=>${event.name}</h2>
+      <div id="app">
+       <div id="food" class="quad">
+        <table class='table table-bordered'>
+        <thead class ="colored">
+          <tr>
+            <th>Food</th>
+            <th>Quantity</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          </thead>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        </div>
+        <div id="staff" class="quad">
+        <table class='table table-bordered'>
+        <thead class ="colored">
+          <tr>
+            <th>Staff</th>
+            <th>Quantity</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          </thead>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        </div>
+        <div id="show" class="quad">
+        <table class='table table-bordered'>
+        <thead class ="colored">
+          <tr>
+            <th>Show</th>
+            <th>Quantity</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          </thead>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        </div>
+        <div id="Souvenirs" class="quad">
+        <table class='table table-bordered'>
+        <thead class ="colored">
+          <tr>
+            <th>Souvenirs</th>
+            <th>Quantity</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          </thead>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        </div>
+        </div>
+      `;
       console.warn('This does work!', event);
+      utils.printToDom('#individual-event', domString);
     });
 
   $('#events-page').addClass('hide');
