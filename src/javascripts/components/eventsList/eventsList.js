@@ -121,6 +121,7 @@ const addNewEvent = (e) => {
   e.preventDefault();
   const newEventObj = {
     name: $('#addEvent-name').val(),
+    foodId: $('#eventFoodSelect').val(),
   };
 
   eventData.addEvent(newEventObj)
