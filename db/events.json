@@ -1,9 +1,9 @@
 {
   "event1": {
       "name": "Brooke's Birthday",
-      "foodId": "food1, food2",
-      "staffId": "staff1, staff2",
-      "souvenirId": "souvenir1, souvenir2",
+      "foodId": "food1",
+      "staffId": "staff1",
+      "souvenirId": "souvenir3",
       "showId": "show1",
       "userId": "hQX3AOTCnhRcuYLMCKsTHNvNcPC3"
   },
@@ -17,10 +17,10 @@
   },
   "event3": {
     "name": "Mark's Honeymoon",
-    "foodId": "food4",
-    "staffId": "staff2, staff 1",
+    "foodId": "food2",
+    "staffId": "staff2",
     "souvenirId": "souvenir1",
-    "showId": "show1, show2",
+    "showId": "show1",
     "userId": "ikazf8WRTqXtjlPMh4Rtp49eShk2"
   }
 }
