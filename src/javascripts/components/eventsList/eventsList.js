@@ -1,6 +1,5 @@
 import eventPageComponent from '../eventMaker/eventMaker';
 import addEvent from '../addEvent/addEvent';
-import foodData from '../../helpers/data/foodData';
 
 import smash from '../../helpers/data/smash';
 import eventData from '../../helpers/data/eventData';
@@ -27,14 +26,10 @@ const viewIndividualEvent = (e) => {
             <th>Food</th>
             <th>Quantity</th>
           </tr>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
           </thead>
           <tr>
-            <td></td>
-            <td></td>
+            <td>${event.food.name}</td>
+            <td><input type="text"></td>
           </tr>
           <tr>
             <td></td>
@@ -43,12 +38,8 @@ const viewIndividualEvent = (e) => {
           <tr>
             <td></td>
             <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
+           </tr>
+          </table>
         </div>
         <div id="staff" class="quad">
         <table class='table table-bordered'>
@@ -57,18 +48,10 @@ const viewIndividualEvent = (e) => {
             <th>Staff</th>
             <th>Quantity</th>
           </tr>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
           </thead>
           <tr>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
+            <td>${event.staff.name}</td>
+            <td><input type="text"></td>
           </tr>
           <tr>
             <td></td>
@@ -87,18 +70,10 @@ const viewIndividualEvent = (e) => {
             <th>Show</th>
             <th>Quantity</th>
           </tr>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
           </thead>
           <tr>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
+            <td>${event.show.name}</td>
+            <td><input type="text"></td>
           </tr>
           <tr>
             <td></td>
@@ -117,18 +92,10 @@ const viewIndividualEvent = (e) => {
             <th>Souvenirs</th>
             <th>Quantity</th>
           </tr>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
           </thead>
           <tr>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
+            <td>${event.souv.name}</td>
+            <td><input type="text"></td>
           </tr>
           <tr>
             <td></td>

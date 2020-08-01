@@ -46,6 +46,7 @@ const eventsResetPage = () => {
     $('#edit-staff').addClass('hide');
     $('#events-page').addClass('hide');
     $('#new-event').addClass('hide');
+    $('#individual-event').addClass('hide');
   });
 };
 
