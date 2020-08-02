@@ -1,0 +1,22 @@
+{
+  "eventStaff1": {
+    "eventId": "event1",
+    "staffId": "staff1"
+  },
+  "eventStaff2": {
+    "eventId": "event1",
+    "staffId": "staff2"
+  },
+  "eventStaff3": {
+    "eventId": "event2",
+    "staffId": "staff3"
+  },
+  "eventStaff4": {
+    "eventId": "event3",
+    "staffId": "staff1"
+  },
+  "eventStaff5": {
+    "eventId": "event3",
+    "staffId": "staff2"
+  }
+}
