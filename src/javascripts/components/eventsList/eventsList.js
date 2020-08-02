@@ -24,17 +24,11 @@ const viewIndividualEvent = (e) => {
         <thead class ="colored">
           <tr>
             <th>Food</th>
-            <th>Quantity</th>
           </tr>
           </thead>
           <tr>
             <td>${event.food.name}</td>
-            <td><input type="text" class="width-value"></td>
           </tr>
-          <tr>
-          </tr>
-          <tr>
-           </tr>
           </table>
           <button type="button" id="edit-food" class="btn btn-secondary">Edit Food</button>
         </div>
@@ -43,16 +37,10 @@ const viewIndividualEvent = (e) => {
         <thead class ="colored">
           <tr>
             <th>Staff</th>
-            <th>Quantity</th>
           </tr>
           </thead>
           <tr>
             <td>${event.staff.name}</td>
-            <td><input type="text" class="width-value"></td>
-          </tr>
-          <tr>
-          </tr>
-          <tr>
           </tr>
         </table>
         <button type="button" id="edit-staff" class="btn btn-secondary">Edit Staff</button>
@@ -62,16 +50,10 @@ const viewIndividualEvent = (e) => {
         <thead class ="colored">
           <tr>
             <th>Show</th>
-            <th>Quantity</th>
           </tr>
           </thead>
           <tr>
             <td>${event.show.name}</td>
-            <td><input type="text" class="width-value"></td>
-          </tr>
-          <tr>
-          </tr>
-          <tr>
           </tr>
         </table>
         <button type="button" id="edit-show" class="btn btn-secondary">Edit Show</button>
@@ -81,16 +63,10 @@ const viewIndividualEvent = (e) => {
         <thead class="colored">
           <tr>
             <th>Souvenirs</th>
-            <th>Quantity</th>
           </tr>
           </thead>
           <tr>
             <td>${event.souv.name}</td>
-            <td><input type="text" class="width-value"></td>
-          </tr>
-          <tr>
-          </tr>
-          <tr>
           </tr>
         </table>
         <button type="button" id="edit-souv" class="btn btn-secondary">Edit Souvenirs</button>
