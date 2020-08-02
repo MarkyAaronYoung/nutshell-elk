@@ -15,7 +15,6 @@ const getShows = () => new Promise((resolve, reject) => {
           shows.push(showObjects[showId]);
         });
       }
-
       resolve(shows);
     })
     .catch((err) => reject(err));
