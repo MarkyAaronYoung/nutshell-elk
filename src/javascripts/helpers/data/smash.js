@@ -12,32 +12,18 @@ const getSingleEventInfo = (eventId) => new Promise((resolve, reject) => {
 
       foodsData.getFoodById(event.foodId).then((food) => {
         event.food = food.data;
-<<<<<<< Updated upstream
         staffData.getStaffById(event.staffId).then((staff) => {
           event.staff = staff.data;
           showData.getShowById(event.showId).then((show) => {
             event.show = show.data;
             souvData.getSouvById(event.souvenirId).then((souv) => {
               event.souv = souv.data;
-=======
 
-        staffData.getStaffById(event.staffId).then((staff) => {
-          event.staff = staff.data;
-
-          showData.getShowById(event.showId).then((show) => {
-            event.show = show.data;
-
-            souvData.getSouvById(event.souvenirId).then((souvenir) => {
-              event.souv = souvenir.data;
-
->>>>>>> Stashed changes
               resolve(event);
             });
           });
         });
       });
-<<<<<<< Updated upstream
-=======
     })
     .catch((err) => reject(err));
 });
@@ -59,7 +45,6 @@ const getEventFoodInfo = (eventId) => new Promise((resolve, reject) => {
         });
       });
       resolve(event.foods);
->>>>>>> Stashed changes
     })
     .catch((err) => reject(err));
 });
