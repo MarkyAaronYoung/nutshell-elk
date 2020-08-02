@@ -24,21 +24,11 @@ const viewIndividualEvent = (e) => {
         <thead class ="colored">
           <tr>
             <th>Food</th>
-            <th>Quantity</th>
           </tr>
           </thead>
           <tr>
             <td>${event.food.name}</td>
-            <td><input type="text"></td>
           </tr>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-           </tr>
           </table>
         </div>
         <div id="staff" class="quad">
@@ -46,20 +36,10 @@ const viewIndividualEvent = (e) => {
         <thead class ="colored">
           <tr>
             <th>Staff</th>
-            <th>Quantity</th>
           </tr>
           </thead>
           <tr>
             <td>${event.staff.name}</td>
-            <td><input type="text"></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
           </tr>
         </table>
         </div>
@@ -68,20 +48,10 @@ const viewIndividualEvent = (e) => {
         <thead class ="colored">
           <tr>
             <th>Show</th>
-            <th>Quantity</th>
           </tr>
           </thead>
           <tr>
             <td>${event.show.name}</td>
-            <td><input type="text"></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
           </tr>
         </table>
         </div>
@@ -90,20 +60,10 @@ const viewIndividualEvent = (e) => {
         <thead class ="colored">
           <tr>
             <th>Souvenirs</th>
-            <th>Quantity</th>
           </tr>
           </thead>
           <tr>
             <td>${event.souv.name}</td>
-            <td><input type="text"></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
           </tr>
         </table>
         </div>
