@@ -4,6 +4,24 @@
   grid-template-rows: 50% 50%;
 }
 
+.colored {
+  background-color: #a44200ff !important;
+}
+
 .quad {
   text-align: center;
+  margin-bottom: 50px;
+}
+
+.btn-secondary {
+  width: 8rem;
+}
+
+.width-value {
+  width: 50px;
+}
+
+.delete-btn {
+  text-align: center;
+  margin-top: 30px;
 }

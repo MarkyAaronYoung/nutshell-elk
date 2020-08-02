@@ -29,17 +29,14 @@ const viewIndividualEvent = (e) => {
           </thead>
           <tr>
             <td>${event.food.name}</td>
-            <td><input type="text"></td>
+            <td><input type="text" class="width-value"></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
            </tr>
           </table>
+          <button type="button" id="edit-food" class="btn btn-secondary">Edit Food</button>
         </div>
         <div id="staff" class="quad">
         <table class='table table-bordered'>
@@ -51,17 +48,14 @@ const viewIndividualEvent = (e) => {
           </thead>
           <tr>
             <td>${event.staff.name}</td>
-            <td><input type="text"></td>
+            <td><input type="text" class="width-value"></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
           </tr>
         </table>
+        <button type="button" id="edit-staff" class="btn btn-secondary">Edit Staff</button>
         </div>
         <div id="show" class="quad">
         <table class='table table-bordered'>
@@ -73,21 +67,18 @@ const viewIndividualEvent = (e) => {
           </thead>
           <tr>
             <td>${event.show.name}</td>
-            <td><input type="text"></td>
+            <td><input type="text" class="width-value"></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
           </tr>
         </table>
+        <button type="button" id="edit-show" class="btn btn-secondary">Edit Show</button>
         </div>
         <div id="Souvenirs" class="quad">
         <table class='table table-bordered'>
-        <thead class ="colored">
+        <thead class="colored">
           <tr>
             <th>Souvenirs</th>
             <th>Quantity</th>
@@ -95,19 +86,19 @@ const viewIndividualEvent = (e) => {
           </thead>
           <tr>
             <td>${event.souv.name}</td>
-            <td><input type="text"></td>
+            <td><input type="text" class="width-value"></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
           </tr>
         </table>
+        <button type="button" id="edit-souv" class="btn btn-secondary">Edit Souvenirs</button>
         </div>
-        </div>
+      </div>
+      <div class="delete-btn">
+      <button type="button" id="delete-event" class="btn btn-secondary colored">Delete Event</button>
+      </div>
       `;
       console.warn('This does work!', event);
       utils.printToDom('#individual-event', domString);
