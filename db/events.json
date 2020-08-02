@@ -17,8 +17,13 @@
   },
   "event3": {
     "name": "Mark's Honeymoon",
+<<<<<<< Updated upstream
     "foodId": "food2",
     "staffId": "staff2",
+=======
+    "foodId": "food4",
+    "staffId": "staff1, staff2",
+>>>>>>> Stashed changes
     "souvenirId": "souvenir1",
     "showId": "show1",
     "userId": "ikazf8WRTqXtjlPMh4Rtp49eShk2"

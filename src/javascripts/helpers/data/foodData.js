@@ -8,6 +8,7 @@ const getFoods = () => new Promise((resolve, reject) => {
     .then((response) => {
       const foodObjects = response.data;
       const foods = [];
+
       if (foodObjects) {
         Object.keys(foodObjects).forEach((foodId) => {
           foodObjects[foodId].id = foodId;

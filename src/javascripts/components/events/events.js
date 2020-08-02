@@ -9,4 +9,6 @@ const buildEvents = (event) => {
   return domString;
 };
 
-export default { buildEvents };
+export default {
+  buildEvents,
+};
