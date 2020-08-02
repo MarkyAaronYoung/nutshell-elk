@@ -1,4 +1,5 @@
-<<<<<<< Updated upstream
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap');
+
 #app {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -25,8 +26,7 @@
 .delete-btn {
   text-align: center;
   margin-top: 30px;
-=======
-@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap');
+}
 
 .singleEvent-container {
   display: flex;
@@ -58,10 +58,6 @@
   font-size: 1.2em;
 }
 
-.colored {
-  background-color: #a44200ff
-}
-
 #add-event {
   margin: 20px;
 }
@@ -89,5 +85,4 @@ tbody {
   background-color: #646b61ff !important;
   border: none;
   font-family: 'David Libre', serif;
->>>>>>> Stashed changes
 }
