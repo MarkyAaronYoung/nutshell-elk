@@ -2,6 +2,7 @@ import utils from '../../helpers/utils';
 import foodData from '../../helpers/data/foodData';
 import staffData from '../../helpers/data/staffData';
 import souvData from '../../helpers/data/souvData';
+import showData from '../../helpers/data/showData';
 
 const createFoodSelectList = () => {
   let domString = `
@@ -21,8 +22,8 @@ const createFoodSelectList = () => {
 
 const createStaffSelectList = () => {
   let domString = `
-    <label for="eventFoodSelect">Choose Food:</label>
-    <select name="foods" id="eventFoodSelect">
+    <label for="eventStaffSelect">Choose Staff:</label>
+    <select name="staff" id="eventStaffSelect">
   `;
 
   staffData.getStaff()
@@ -37,8 +38,8 @@ const createStaffSelectList = () => {
 
 const createSouvSelectList = () => {
   let domString = `
-    <label for="eventFoodSelect">Choose Food:</label>
-    <select name="foods" id="eventFoodSelect">
+    <label for="eventSouvSelect">Choose Souvenir:</label>
+    <select name="souvs" id="eventSouvSelect">
   `;
 
   souvData.getSouv()
@@ -48,6 +49,22 @@ const createSouvSelectList = () => {
       });
       domString += '</select>';
       utils.printToDom('#eventSouvLander', domString);
+    });
+};
+
+const createShowSelectList = () => {
+  let domString = `
+    <label for="eventShowSelect">Choose Show:</label>
+    <select name="show" id="eventShowSelect">
+  `;
+
+  showData.getShows()
+    .then((shows) => {
+      shows.forEach((show) => {
+        domString += `<option value=${show.id}>${show.name}</option>`;
+      });
+      domString += '</select>';
+      utils.printToDom('#eventShowLander', domString);
     });
 };
 
@@ -62,12 +79,14 @@ const addNewEventForm = (e) => {
       <div class="form-group" id="eventFoodLander"></div>
       <div class="form-group" id="eventStaffLander"></div>
       <div class="form-group" id="eventSouvLander"></div>
+      <div class="form-group" id="eventShowLander"></div>
       <button type="submit" class="btn btn-light" id="event-adder">Update!</button>
     </form>`;
   utils.printToDom('#new-event', domString);
   createFoodSelectList();
   createStaffSelectList();
   createSouvSelectList();
+  createShowSelectList();
 };
 
 export default { addNewEventForm };
