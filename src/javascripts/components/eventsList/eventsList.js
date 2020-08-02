@@ -95,10 +95,6 @@ const viewIndividualEvent = (e) => {
         </table>
         <button type="button" id="edit-souv" class="btn btn-secondary">Edit Souvenirs</button>
         </div>
-      </div>
-      <div class="delete-btn">
-      <button type="button" id="delete-event" class="btn btn-secondary colored">Delete Event</button>
-      </div>
       `;
       console.warn('This does work!', event);
       utils.printToDom('#individual-event', domString);
@@ -123,10 +119,21 @@ const addNewEvent = (e) => {
     .catch((err) => console.error(err));
 };
 
+const removeEventEvent = (e) => {
+  e.preventDefault();
+  const eventId = e.target.closest('.event-card').id;
+  eventData.deleteEvent(eventId)
+    .then(() => {
+      eventPageComponent.eventPageMaker();
+    })
+    .catch((err) => console.error(err));
+};
+
 const eventEvents = () => {
   $('body').on('click', '#viewEvents', viewEvents);
   $('body').on('click', '#add-event', addEvent.addNewEventForm);
   $('body').on('click', '#event-adder', addNewEvent);
+  $('body').on('click', '#delete-event', removeEventEvent);
 };
 
 const individualEventEvents = () => {
