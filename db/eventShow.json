@@ -1,0 +1,18 @@
+{
+  "eventShow1": {
+    "eventId": "event1",
+    "showId": "show1"
+  },
+  "eventShow2": {
+    "eventId": "event2",
+    "showId": "show1"
+  },
+  "eventShow3": {
+    "eventId": "event3",
+    "showId": "show1"
+  },
+  "eventShow4": {
+    "eventId": "event3",
+    "showId": "show2"
+  }
+}

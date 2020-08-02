@@ -1,0 +1,18 @@
+{
+  "eventFood1": {
+    "eventId": "event1",
+    "foodId": "food1"
+  },
+  "eventFood2": {
+    "eventId": "event1",
+    "foodId": "food2"
+  },
+  "eventFood3": {
+    "eventId": "event2",
+    "foodId": "food3"
+  },
+  "eventFood4": {
+    "eventId": "event3",
+    "foodId": "food4"
+  }
+}

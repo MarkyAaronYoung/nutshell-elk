@@ -1,0 +1,18 @@
+{
+  "eventSouvenirs1": {
+    "eventId": "event1",
+    "souvenirId": "souvenir1"
+  },
+  "eventSouvenirs2": {
+    "eventId": "event1",
+    "souvenirId": "souvenir2"
+  },
+  "eventSouvenirs3": {
+    "eventId": "event2",
+    "souvenirId": "souvenir2"
+  },
+  "eventSouvenirs4": {
+    "eventId": "event3",
+    "souvenirId": "souvenir1"
+  }
+}
