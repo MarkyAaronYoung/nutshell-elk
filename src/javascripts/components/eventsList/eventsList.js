@@ -109,6 +109,10 @@ const addNewEvent = (e) => {
   const newEventObj = {
     name: $('#addEvent-name').val(),
     foodId: $('#eventFoodSelect').val(),
+    staffId: $('#eventStaffSelect').val(),
+    souvId: $('#eventSouvSelect').val(),
+    showId: $('#eventShowSelect').val(),
+
   };
 
   eventData.addEvent(newEventObj)
