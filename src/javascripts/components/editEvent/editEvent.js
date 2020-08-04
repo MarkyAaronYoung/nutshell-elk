@@ -70,7 +70,7 @@ const createShowSelectList = () => {
 
 const eventEditForm = (e) => {
   e.preventDefault();
-  $('#edit-event-food').removeClass('hide');
+  $('#edit-event').removeClass('hide');
   const domString = `<form> 
         <div class="form-group">
           <label for="editEvent-name">Event Name</label>
@@ -82,7 +82,7 @@ const eventEditForm = (e) => {
         <div class="form-group" id="eventEditShowLander"></div>
         <button type="submit" class="btn btn-light" id="event-edit">Update!</button>
         </form>`;
-  utils.printToDom('#edit-event-food', domString);
+  utils.printToDom('#edit-event', domString);
   createFoodSelectList();
   createStaffSelectList();
   createSouvSelectList();

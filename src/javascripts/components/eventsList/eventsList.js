@@ -78,7 +78,7 @@ const viewIndividualEvent = (e) => {
         </table>
         </div>
         <div id="edit">
-        <button type="button" id="edit-event" class="btn btn-secondary">Edit Event</button>
+        <button type="button" id="edited-event" class="btn btn-secondary">Edit Event</button>
         </div>
       `;
       console.warn(event);
@@ -150,7 +150,7 @@ const eventEvents = () => {
   $('body').on('click', '#event-adder', addNewEvent);
   $('body').on('click', '#delete-event', removeEventEvent);
   $('body').on('click', '#finances', viewFinances);
-  $('body').on('click', '#edit-event', editEvent.eventEditForm);
+  $('body').on('click', '#edited-event', editEvent.eventEditForm);
   $('body').on('click', '#event-edit', editIndEvent);
 };
 
