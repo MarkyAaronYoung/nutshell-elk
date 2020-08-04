@@ -35,7 +35,7 @@ const buildFoods = (e) => {
               rowString += menu.foodMakerNoAuth(food);
             }
           });
-          const domString = `<table class='table table-bordered'>` + headerString + rowString + `</table>` // eslint-disable-line
+          const domString = `<table class='table table-bordered' style='margin-left:auto;margin-right:auto'>` + headerString + rowString + `</table>` // eslint-disable-line
           utils.printToDom('#food', domString);
         })
         .catch((err) => console.error('it broke', err));

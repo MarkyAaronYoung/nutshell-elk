@@ -16,9 +16,10 @@ const viewIndividualEvent = (e) => {
   const eventId = e.target.closest('.event-card').id;
   smash.getSingleEventInfo(eventId)
     .then((event) => {
-      const domString = `
+      const domString = ` 
       <h2 class=>${event.name}</h2>
       <div id="app">
+      <div class="food-staff-container text-center">
        <div id="food" class="quad">
         <table class='table table-bordered'>
         <thead class ="colored">
@@ -45,6 +46,8 @@ const viewIndividualEvent = (e) => {
         </table>
         <button type="button" id="edit-staff" class="btn btn-secondary">Edit Staff</button>
         </div>
+        </div>
+        <div class="show-souv-container text-center">
         <div id="show" class="quad">
         <table class='table table-bordered'>
         <thead class ="colored">
@@ -71,8 +74,9 @@ const viewIndividualEvent = (e) => {
         </table>
         <button type="button" id="edit-souv" class="btn btn-secondary">Edit Souvenirs</button>
         </div>
+        </div>
       `;
-      console.warn('This does work!', event);
+      console.warn(event);
       utils.printToDom('#individual-event', domString);
     });
 
