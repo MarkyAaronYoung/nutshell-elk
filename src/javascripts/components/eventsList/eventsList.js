@@ -20,9 +20,12 @@ const viewIndividualEvent = (e) => {
       const domString = `
       <div class="text-right">
       <h2 class=>${event.name}</h2>
+      <div id="finance-btn">
       <button type="button" id="finances" class="btn btn-secondary ml-auto finances">Finances</button>
       </div>
+      </div>
       <div id="app" data-event-id="${eventId}">
+      <div class="food-staff-container text-center">
        <div id="food" class="quad">
         <table class='table table-bordered'>
         <thead class ="colored">
