@@ -6,8 +6,8 @@ import showData from '../../helpers/data/showData';
 
 const createFoodSelectList = () => {
   let domString = `
-    <label for="eventFoodSelect">Choose Food:</label>
-    <select name="foods" id="eventFoodSelect">
+    <label for="eventEditFoodSelect">Change Food:</label>
+    <select name="foods" id="eventEditFoodSelect">
   `;
 
   foodData.getFoods()
@@ -16,15 +16,15 @@ const createFoodSelectList = () => {
         domString += `<option value=${food.id}>${food.name}</option>`;
       });
       domString += '</select>';
-      utils.printToDom('#eventFoodLander', domString);
+      utils.printToDom('#eventEditFoodLander', domString);
     });
 };
 
 const createStaffSelectList = () => {
   let domString = `
-    <label for="eventStaffSelect">Choose Staff:</label>
-    <select name="staff" id="eventStaffSelect">
-  `;
+    <label for="eventEditStaffSelect">Change Staff:</label>
+    <select name="staff" id="eventEditStaffSelect">
+    `;
 
   staffData.getStaff()
     .then((staffs) => {
@@ -32,14 +32,14 @@ const createStaffSelectList = () => {
         domString += `<option value=${staff.id}>${staff.name}</option>`;
       });
       domString += '</select>';
-      utils.printToDom('#eventStaffLander', domString);
+      utils.printToDom('#eventEditStaffLander', domString);
     });
 };
 
 const createSouvSelectList = () => {
   let domString = `
-    <label for="eventSouvSelect">Choose Souvenir:</label>
-    <select name="souvs" id="eventSouvSelect">
+    <label for="eventEditSouvSelect">Change Souvenir:</label>
+    <select name="souvs" id="eventEditSouvSelect">
     `;
 
   souvData.getSouv()
@@ -48,15 +48,15 @@ const createSouvSelectList = () => {
         domString += `<option value=${souv.id}>${souv.name}</option>`;
       });
       domString += '</select>';
-      utils.printToDom('#eventSouvLander', domString);
+      utils.printToDom('#eventEditSouvLander', domString);
     });
 };
 
 const createShowSelectList = () => {
   let domString = `
-    <label for="eventShowSelect">Choose Show:</label>
-    <select name="show" id="eventShowSelect">
-  `;
+    <label for="eventEditShowSelect">Change Show:</label>
+    <select name="show" id="eventEditShowSelect">
+    `;
 
   showData.getShows()
     .then((shows) => {
@@ -64,29 +64,29 @@ const createShowSelectList = () => {
         domString += `<option value=${show.id}>${show.name}</option>`;
       });
       domString += '</select>';
-      utils.printToDom('#eventShowLander', domString);
+      utils.printToDom('#eventEditShowLander', domString);
     });
 };
 
-const addNewEventForm = (e) => {
+const eventEditForm = (e) => {
   e.preventDefault();
-  $('#new-event').removeClass('hide');
-  const domString = `<form>
-      <div class="form-group">
-        <label for="addEvent-name">Event Name</label>
-        <input type="text" class="form-control" id="addEvent-name">
-      </div>
-      <div class="form-group" id="eventFoodLander"></div>
-      <div class="form-group" id="eventStaffLander"></div>
-      <div class="form-group" id="eventSouvLander"></div>
-      <div class="form-group" id="eventShowLander"></div>
-      <button type="submit" class="btn btn-light" id="event-adder">Update!</button>
-    </form>`;
-  utils.printToDom('#new-event', domString);
+  $('#edit-event-food').removeClass('hide');
+  const domString = `<form> 
+        <div class="form-group">
+          <label for="editEvent-name">Event Name</label>
+          <input type="text" class="form-control" id="editEvent-name">
+        </div>
+        <div class="form-group" id="eventEditFoodLander"></div>
+        <div class="form-group" id="eventEditStaffLander"></div>
+        <div class="form-group" id="eventEditSouvLander"></div>
+        <div class="form-group" id="eventEditShowLander"></div>
+        <button type="submit" class="btn btn-light" id="event-edit">Update!</button>
+        </form>`;
+  utils.printToDom('#edit-event-food', domString);
   createFoodSelectList();
   createStaffSelectList();
   createSouvSelectList();
   createShowSelectList();
 };
 
-export default { addNewEventForm };
+export default { eventEditForm };

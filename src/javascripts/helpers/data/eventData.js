@@ -25,9 +25,12 @@ const addEvent = (newEventObj) => axios.post(`${baseUrl}/events.json`, newEventO
 
 const deleteEvent = (eventId) => axios.delete(`${baseUrl}/events/${eventId}.json`);
 
+const editEvent = (eventId, editedEventObj) => axios.put(`${baseUrl}/events/${eventId}.json`, editedEventObj);
+
 export default {
   getEvents,
   getEventById,
   addEvent,
   deleteEvent,
+  editEvent,
 };
