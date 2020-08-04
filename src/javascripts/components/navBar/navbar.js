@@ -47,7 +47,6 @@ const eventsResetPage = () => {
     $('#events-page').addClass('hide');
     $('#individual-event').addClass('hide');
     $('#new-event').addClass('hide');
-    $('#individual-event').addClass('hide');
   });
 };
 

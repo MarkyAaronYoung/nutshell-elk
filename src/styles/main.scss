@@ -7,6 +7,7 @@ body {
   // background-color: #f7e8a4ff;
   // background: url("https://cdn.hipwallpaper.com/m/7/78/46n0xh.jpg") no-repeat;
   background-size: cover;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 h1 {
@@ -31,6 +32,11 @@ h5 {
   font-weight: bold;
   font-size: 1.3em;
   font-family: 'Cinzel', cursive;
+}
+
+#back-btn {
+  padding-left: 16px;
+  color: #a44200ff !important;
 }
 
 #google-auth {
@@ -65,4 +71,9 @@ form {
   background-color: #646b61ff !important;
   font-family: 'David Libre', serif;
   border: none;
+}
+
+#chartdiv {
+  width: 100%;
+  height: 500px;
 }
