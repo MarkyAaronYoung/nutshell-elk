@@ -1,6 +1,7 @@
 import eventPageComponent from '../eventMaker/eventMaker';
 import addEvent from '../addEvent/addEvent';
 import buildFinances from '../finances/finances';
+import editEvent from '../editEvent/editEvent';
 
 import smash from '../../helpers/data/smash';
 import eventData from '../../helpers/data/eventData';
@@ -37,7 +38,6 @@ const viewIndividualEvent = (e) => {
             <td>${event.food.name}</td>
           </tr>
           </table>
-          <button type="button" id="edit-food" class="btn btn-secondary">Edit Food</button>
         </div>
         <div id="staff" class="quad">
         <table class='table table-bordered'>
@@ -50,7 +50,6 @@ const viewIndividualEvent = (e) => {
             <td>${event.staff.name}</td>
           </tr>
         </table>
-        <button type="button" id="edit-staff" class="btn btn-secondary">Edit Staff</button>
         </div>
         </div>
         <div class="show-souv-container text-center">
@@ -65,7 +64,6 @@ const viewIndividualEvent = (e) => {
             <td>${event.show.name}</td>
           </tr>
         </table>
-        <button type="button" id="edit-show" class="btn btn-secondary">Edit Show</button>
         </div>
         <div id="Souvenirs" class="quad">
         <table class='table table-bordered'>
@@ -78,8 +76,9 @@ const viewIndividualEvent = (e) => {
             <td>${event.souv.name}</td>
           </tr>
         </table>
-        <button type="button" id="edit-souv" class="btn btn-secondary">Edit Souvenirs</button>
         </div>
+        <div id="edit">
+        <button type="button" id="edited-event" class="btn btn-secondary">Edit Event</button>
         </div>
       `;
       console.warn(event);
@@ -103,7 +102,7 @@ const addNewEvent = (e) => {
     name: $('#addEvent-name').val(),
     foodId: $('#eventFoodSelect').val(),
     staffId: $('#eventStaffSelect').val(),
-    souvId: $('#eventSouvSelect').val(),
+    souvenirId: $('#eventSouvSelect').val(),
     showId: $('#eventShowSelect').val(),
 
   };
@@ -126,12 +125,33 @@ const removeEventEvent = (e) => {
     .catch((err) => console.error(err));
 };
 
+const editIndEvent = (e) => {
+  e.preventDefault();
+  const editedEventObj = {
+    name: $('#editEvent-name').val(),
+    foodId: $('#eventEditFoodSelect').val(),
+    staffId: $('#eventEditStaffSelect').val(),
+    souvenirId: $('#eventEditSouvSelect').val(),
+    showId: $('#eventEditShowSelect').val(),
+  };
+  console.warn(editedEventObj);
+  const { eventId } = document.getElementById('app').dataset;
+  eventData.editEvent(eventId, editedEventObj)
+    .then(() => {
+      eventPageComponent.eventPageMaker();
+      utils.printToDom('#edit-event', '');
+    })
+    .catch((err) => console.error(err));
+};
+
 const eventEvents = () => {
   $('body').on('click', '#viewEvents', viewEvents);
   $('body').on('click', '#add-event', addEvent.addNewEventForm);
   $('body').on('click', '#event-adder', addNewEvent);
   $('body').on('click', '#delete-event', removeEventEvent);
   $('body').on('click', '#finances', viewFinances);
+  $('body').on('click', '#edited-event', editEvent.eventEditForm);
+  $('body').on('click', '#event-edit', editIndEvent);
 };
 
 const individualEventEvents = () => {
