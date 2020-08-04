@@ -1,5 +1,6 @@
 import eventPageComponent from '../eventMaker/eventMaker';
 import addEvent from '../addEvent/addEvent';
+import buildFinances from '../finances/finances';
 
 import smash from '../../helpers/data/smash';
 import eventData from '../../helpers/data/eventData';
@@ -17,8 +18,11 @@ const viewIndividualEvent = (e) => {
   smash.getSingleEventInfo(eventId)
     .then((event) => {
       const domString = `
+      <div class="text-right">
       <h2 class=>${event.name}</h2>
-      <div id="app">
+      <button type="button" id="finances" class="btn btn-secondary ml-auto finances">Finances</button>
+      </div>
+      <div id="app" data-event-id="${eventId}">
        <div id="food" class="quad">
         <table class='table table-bordered'>
         <thead class ="colored">
@@ -80,6 +84,13 @@ const viewIndividualEvent = (e) => {
   $('#individual-event').removeClass('hide');
 };
 
+const viewFinances = (e) => {
+  $('#finance-page').removeClass('hide');
+  console.warn(e);
+  const { eventId } = document.getElementById('app').dataset;
+  buildFinances.buildFinances(eventId);
+};
+
 const addNewEvent = (e) => {
   e.preventDefault();
   const newEventObj = {
@@ -114,6 +125,7 @@ const eventEvents = () => {
   $('body').on('click', '#add-event', addEvent.addNewEventForm);
   $('body').on('click', '#event-adder', addNewEvent);
   $('body').on('click', '#delete-event', removeEventEvent);
+  $('body').on('click', '#finances', viewFinances);
 };
 
 const individualEventEvents = () => {
