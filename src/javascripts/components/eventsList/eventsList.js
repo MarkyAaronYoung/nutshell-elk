@@ -20,9 +20,9 @@ const viewIndividualEvent = (e) => {
       const domString = `
       <div class="text-right">
       <h2 class=>${event.name}</h2>
-      <button type="button" id="finances" class="btn btn-secondary ml-auto">Finances</button>
+      <button type="button" id="finances" class="btn btn-secondary ml-auto finances">Finances</button>
       </div>
-      <div id="app">
+      <div id="app" data-event-id="${eventId}">
        <div id="food" class="quad">
         <table class='table table-bordered'>
         <thead class ="colored">
@@ -85,10 +85,10 @@ const viewIndividualEvent = (e) => {
 };
 
 const viewFinances = (e) => {
-  $('#finances-page').removeClass('hide');
+  $('#finance-page').removeClass('hide');
   console.warn(e);
-  buildFinances.buildFinances();
-  console.warn(buildFinances);
+  const { eventId } = document.getElementById('app').dataset;
+  buildFinances.buildFinances(eventId);
 };
 
 const addNewEvent = (e) => {
