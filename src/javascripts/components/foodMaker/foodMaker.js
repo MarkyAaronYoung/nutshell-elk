@@ -40,7 +40,7 @@ const authFood = () => {
       const headerString = `
       <h2>Menu</h2>
       <div class="text-center" id="food-button">
-      <button type="button" id="add-food" class="btn btn-secondary">Add Food</button>
+      <button type="button" id="add-food" class="btn btn-secondary">Add New Food</button>
       </div>
       <thead>
       <thead class="colored">
@@ -56,7 +56,7 @@ const authFood = () => {
       foods.forEach((food) => {
         rowString += foodMakerAuth(food);
       });
-    const domString = `<table class='table table-bordered'>` + headerString + rowString + `</table>` // eslint-disable-line
+    const domString = `<table class='table table-bordered' style='margin-left:auto;margin-right:auto'>` + headerString + rowString + `</table>` // eslint-disable-line
       utils.printToDom('#food', domString);
     });
 };

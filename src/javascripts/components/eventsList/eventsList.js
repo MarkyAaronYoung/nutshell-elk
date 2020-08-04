@@ -21,9 +21,12 @@ const viewIndividualEvent = (e) => {
       const domString = `
       <div class="text-right">
       <h2 class=>${event.name}</h2>
+      <div id="finance-btn">
       <button type="button" id="finances" class="btn btn-secondary ml-auto finances">Finances</button>
       </div>
+      </div>
       <div id="app" data-event-id="${eventId}">
+      <div class="food-staff-container text-center">
        <div id="food" class="quad">
         <table class='table table-bordered'>
         <thead class ="colored">
@@ -48,6 +51,8 @@ const viewIndividualEvent = (e) => {
           </tr>
         </table>
         </div>
+        </div>
+        <div class="show-souv-container text-center">
         <div id="show" class="quad">
         <table class='table table-bordered'>
         <thead class ="colored">
@@ -74,8 +79,9 @@ const viewIndividualEvent = (e) => {
         </div>
         <div id="edit">
         <button type="button" id="edit-event" class="btn btn-secondary">Edit Event</button>
+        </div>
       `;
-      console.warn('This does work!', event);
+      console.warn(event);
       utils.printToDom('#individual-event', domString);
     });
 
